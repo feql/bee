@@ -1,0 +1,56 @@
+version: '3'
+services:
+
+  feql_mysql_srv:
+    container_name: feql_mysql_cnt
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: mysql
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: mysql
+      MYSQL_INITDB_SKIP_TZINFO: 1
+    restart: always
+    volumes:
+      - ./databases:/var/lib/mysql/data
+    ports:
+      - 7788:3306
+
+  feql_phpmyadmin_srv:
+    container_name: feql_phpmyadmin_cnt
+    image: phpmyadmin/phpmyadmin
+    environment:
+     - PMA_ARBITRARY=1
+     - PMA_HOST=feql_mysql_srv
+     - PMA_PORT=3306
+    restart: always
+    ports:
+      - 7787:80
+    volumes:
+      - ./phpmyadmin/sessions/:/www/sessions
+      - ./phpmyadmin/config.user.inc.php:/etc/phpmyadmin/config.user.inc.php
+      - ./phpmyadmin/theme/:/www/themes/theme/
+    depends_on:
+      - feql_mysql_srv
+
+  feql_be_srv:
+    container_name: feql_be_cnt
+    build:
+      context: .
+      dockerfile: ./app/Dockerfile
+    environment:
+        PHP_EXTENSION_GD: 1
+        db_server_name: feql_mysql_srv
+        db_server_port: 3306
+        db_server_user: root
+        db_server_password: secret
+        smsto_api_key: ""
+        sendgrid_api_key: ""
+    volumes:
+      - ./app/:/var/www/html/
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - 7786:80
+    depends_on:
+      - feql_phpmyadmin_srv
+

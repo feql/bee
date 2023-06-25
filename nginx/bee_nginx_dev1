@@ -1,0 +1,38 @@
+##Http redirect
+server {
+
+        listen 12.0.10.11:5020;
+        server_tokens off;
+
+        #port redirection
+        port_in_redirect off;
+
+        #logs
+        access_log /srv/bee_feql/api_app/v1/logs/access.log;
+        error_log /srv/bee_feql/api_app/v1/logs/error.log;
+
+        #Document root
+        root /srv/bee_feql/api_app/v1/app;
+
+        #Add index.php to the list if you are using PHP
+        index index.php;
+
+        location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                try_files $uri $uri/ =404;
+        }
+
+        #route php
+        location ~ \.php$ {
+                include snippets/fastcgi-php.conf;
+
+               # With php7.4-fpm:
+                fastcgi_pass unix:/run/php/php7.4-fpm.sock;
+        }
+
+        #block htaccess
+        location ~ /\.ht {
+                deny all;
+        }
+}

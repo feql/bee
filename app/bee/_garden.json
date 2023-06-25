@@ -1,0 +1,679 @@
+{
+    "hive": {
+        "name": [
+            "vcnn",
+            60
+        ],
+        "hive_name": [
+            "vcnn",
+            60
+        ],
+        "email": [
+            "vcnn",
+            60
+        ],
+        "phone_number": [
+            "vcnn",
+            60
+        ],
+        "country": [
+            "vcnn",
+            30
+        ],
+        "code": [
+            "vcnn",
+            30
+        ],
+        "status": [
+            "vcnn",
+            30,
+            "new"
+        ],
+        "password": [
+            "vcnn",
+            255
+        ],
+        "_hidden": [
+            "code",
+            "password"
+        ]
+    },
+    "hive_user": {
+        "user_id": [
+            "inn",
+            30
+        ],
+        "hive_id": [
+            "inn",
+            30
+        ],
+        "hive_name": [
+            "vcnn",
+            60
+        ],
+        "email": [
+            "vcnn",
+            60
+        ],
+        "password": [
+            "vcnn",
+            255
+        ],
+        "_hidden": [
+            "password"
+        ]
+    },
+    "comb": {
+        "hive_id": [
+            "fk"
+        ],
+        "name": [
+            "vcnn",
+            100
+        ],
+        "description": [
+            "vcnn",
+            100
+        ]
+    },
+    "section": {
+        "comb_id": [
+            "fk"
+        ],
+        "name": [
+            "vcnn",
+            100
+        ],
+        "db_kind": [
+            "vcnn",
+            100
+        ],
+        "type": [
+            "vcnn",
+            30
+        ]
+    },
+    "section_fragile": {
+        "section_id": [
+            "fk"
+        ],
+        "section_name": [
+            "vcnn",
+            100
+        ],
+        "used_by_section_id": [
+            "vcnn",
+            30
+        ]
+    },
+    "log": {
+        "route": [
+            "vcn",
+            100
+        ],
+        "type": [
+            "vcn",
+            30
+        ],
+        "CRUD_opertion": [
+            "vcn",
+            30
+        ],
+        "table": [
+            "vcn",
+            30
+        ],
+        "affected_record_guid": [
+            "tnn"
+        ],
+        "description": [
+            "vcnn",
+            100
+        ],
+        "json_data": [
+            "tnn"
+        ],
+        "service_name": [
+            "vcn",
+            30
+        ],
+        "role": [
+            "vcn",
+            100
+        ],
+        "permissions": [
+            "vcn",
+            100
+        ]
+    },
+    "module": {
+        "hive_id": [
+            "fk"
+        ],
+        "time_to_expire": [
+            "inn",
+            "30"
+        ],
+        "code": [
+            "vcnn",
+            30
+        ],
+        "hive_name": [
+            "vcnn",
+            30
+        ],
+        "cost": [
+            "dnn"
+        ],
+        "paid": [
+            "dnn"
+        ],
+        "status": [
+            "vcnn_d",
+            30,
+            "active"
+        ]
+    },
+    "trail": {
+        "hive_name": [
+            "tn"
+        ],
+        "who": [
+            "tn"
+        ],
+        "user_id": [
+            "tn"
+        ],
+        "activity": [
+            "tn"
+        ],
+        "role": [
+            "tn"
+        ],
+        "role_id": [
+            "tn"
+        ],
+        "description": [
+            "tn"
+        ]
+    },
+    "country": {
+        "name": [
+            "vcnn",
+            30
+        ],
+        "code2": [
+            "vcnn",
+            30
+        ],
+        "code3": [
+            "tn"
+        ],
+        "flag": [
+            "tn"
+        ],
+        "status": [
+            "vcnn",
+            30
+        ]
+    },
+    "subscription": {
+        "hive_id": [
+            "fk"
+        ],
+        "package_id": [
+            "fk"
+        ],
+        "start_date": [
+            "vcnn",
+            30
+        ],
+        "start_date_time": [
+            "inn_d",
+            30,
+            0
+        ],
+        "end_date": [
+            "vcnn",
+            30
+        ],
+        "end_date_time": [
+            "inn_d",
+            30,
+            0
+        ],
+        "amount_paid": [
+            "inn_d",
+            30,
+            0
+        ],
+        "transaction_id": [
+            "tn"
+        ],
+        "payment_method": [
+            "vcnn",
+            30
+        ],
+        "account_number": [
+            "vcnn",
+            30
+        ],
+        "account_name": [
+            "vcnn",
+            30
+        ],
+        "status": [
+            "vcnn",
+            30
+        ],
+        "payment_date": [
+            "vcnn",
+            30
+        ],
+        "payment_date_time": [
+            "inn_d",
+            30,
+            0
+        ]
+    },
+    "package": {
+        "name": [
+            "vcnn",
+            30
+        ],
+        "price": [
+            "inn_d",
+            30,
+            0
+        ],
+        "description": [
+            "vcnn",
+            30
+        ],
+        "status": [
+            "vcnn",
+            30
+        ]
+    },
+    "package_item": {
+        "package_id": [
+            "fk"
+        ],
+        "system_item_id": [
+            "pk"
+        ],
+        "status": [
+            "vcnn",
+            30
+        ]
+    },
+    "system_item": {
+        "name": [
+            "vcnn",
+            30
+        ],
+        "description": [
+            "vcnn",
+            30
+        ],
+        "status": [
+            "vcnn",
+            30
+        ]
+    },
+    "company_type": {
+        "name": [
+            "vcnn",
+            30
+        ],
+        "description": [
+            "vcnn",
+            30
+        ],
+        "status": [
+            "vcnn",
+            30
+        ]
+    },
+    "account": {
+        "company_type_id": [
+            "fk"
+        ],
+        "ref_no": [
+            "vcnn",
+            30
+        ],
+        "name": [
+            "vcnn",
+            30
+        ],
+        "type": [
+            "vcnn",
+            30
+        ],
+        "group": [
+            "vcnn",
+            30
+        ],
+        "statement_type": [
+            "vcnn",
+            30
+        ]
+    },
+    "_for": "_garden.json",
+    "_modules": [
+        {
+            "sub_of": "",
+            "name": "dashboard",
+            "code": "dashboard",
+            "cost": 300,
+            "description": ""
+        },
+        {
+            "sub_of": "",
+            "name": "loanproducts",
+            "code": "loan_products",
+            "cost": 300,
+            "description": ""
+        },
+        {
+            "sub_of": "",
+            "name": "clients",
+            "code": "clients",
+            "cost": 300,
+            "description": ""
+        },
+        {
+            "sub_of": "",
+            "name": "contractstatus",
+            "code": "pending_contracts",
+            "cost": 300,
+            "description": ""
+        },
+        {
+            "sub_of": "",
+            "name": "contracts",
+            "code": "contracts",
+            "cost": 300,
+            "description": ""
+        },
+        {
+            "sub_of": "",
+            "name": "repayments",
+            "code": "repayments",
+            "cost": 300,
+            "description": ""
+        },
+        {
+            "sub_of": "",
+            "name": "topuprequests",
+            "code": "topup_requests",
+            "cost": 300,
+            "description": ""
+        },
+        {
+            "sub_of": "",
+            "name": "settlementrequets",
+            "code": "settlement_reqs",
+            "cost": 300,
+            "description": ""
+        },
+        {
+            "sub_of": "",
+            "name": "accounting",
+            "code": "accounting",
+            "cost": 300,
+            "description": ""
+        },
+        {
+            "sub_of": "",
+            "name": "reports",
+            "code": "report",
+            "cost": 300,
+            "description": ""
+        },
+        {
+            "sub_of": "",
+            "name": "salesagents",
+            "code": "sales_agents",
+            "cost": 300,
+            "description": ""
+        },
+        {
+            "sub_of": "",
+            "name": "security",
+            "code": "security",
+            "cost": 300,
+            "description": ""
+        },
+        {
+            "sub_of": "",
+            "name": "configurations",
+            "code": "config",
+            "cost": 300,
+            "description": ""
+        }
+    ],
+    "_actions": {
+        "myaccount_menu_item": {
+            "code": "ma_mi",
+            "name": "my account menu item",
+            "description": "my account menu item"
+        },
+        "dashboard_menu_item": {
+            "code": "db_mi",
+            "name": "dashboard menu item",
+            "description": "dashboard menu item"
+        },
+        "register_menu_item": {
+            "code": "reg_mi",
+            "name": "register menu item",
+            "description": "register menu item"
+        },
+        "register_assets_sub_menu_item": {
+            "code": "rega_smi",
+            "name": "register assets sub menu item",
+            "description": "register assets sub menu item"
+        },
+        "register_inventories_sub_menu_item": {
+            "code": "regi_smi",
+            "name": "register inventories sub menu item",
+            "description": "register inventories sub menu item"
+        },
+        "register_requisitions_sub_menu_item": {
+            "code": "regr_smi",
+            "name": "register requisitions sub menu item",
+            "description": "register requisitions sub menu item"
+        },
+        "register_transfers_sub_menu_item": {
+            "code": "regt_smi",
+            "name": "register transfers sub menu item",
+            "description": "register transfers sub menu item"
+        },
+        "register_disposals_sub_menu_item": {
+            "code": "regd_smi",
+            "name": "register disposals sub menu item",
+            "description": "register disposals sub menu item"
+        },
+        "register_categories_sub_menu_item": {
+            "code": "regc_smi",
+            "name": "register asset categories sub menu item",
+            "description": "register asset categories sub menu item"
+        },
+        "register_stock_categories_sub_menu_item": {
+            "code": "regsc_smi",
+            "name": "register stock categories sub menu item",
+            "description": "register stock categories sub menu item"
+        },
+        "purchases_menu_item": {
+            "code": "puch_mi",
+            "name": "purchases menu item",
+            "description": "purchases menu item"
+        },
+        "purchases_assets_sub_menu_item": {
+            "code": "pucha_smi",
+            "name": "purchases assets sub menu item",
+            "description": "purchases assets sub menu item"
+        },
+        "purchases_inventory_sub_menu_item": {
+            "code": "puchi_smi",
+            "name": "purchases inventory sub menu item",
+            "description": "purchases inventory sub menu item"
+        },
+        "purchases_suppliers_sub_menu_item": {
+            "code": "puchs_smi",
+            "name": "purchases suppliers sub menu item",
+            "description": "purchases suppliers sub menu item"
+        },
+        "om_menu_item": {
+            "code": "om_mi",
+            "name": "O&M menu item",
+            "description": "O&M menu item"
+        },
+        "om_maintanance_sub_menu_item": {
+            "code": "omm_smi",
+            "name": "O&M maintanance sub menu item",
+            "description": "O&M maintanance sub menu item"
+        },
+        "om_insurance_sub_menu_item": {
+            "code": "omi_smi",
+            "name": "O&M insurance sub menu item",
+            "description": "O&M insurance sub menu item"
+        },
+        "om_warranty_sub_menu_item": {
+            "code": "omw_smi",
+            "name": "O&M warranty sub menu item",
+            "description": "O&M warranty sub menu item"
+        },
+        "om_impairment_sub_menu_item": {
+            "code": "omip_smi",
+            "name": "O&M impairment sub menu item",
+            "description": "O&M impairment sub menu item"
+        },
+        "om_asset_verification_sub_menu_item": {
+            "code": "omav_smi",
+            "name": "O&M asset verification sub menu item",
+            "description": "O&M asset verification sub menu item"
+        },
+        "om_inventory_verification_sub_menu_item": {
+            "code": "omiv_smi",
+            "name": "O&M inventory verification sub menu item",
+            "description": "O&M inventory verification sub menu item"
+        },
+        "accounting_menu_item": {
+            "code": "acc_mi",
+            "name": "accounting menu item",
+            "description": "accounting menu item"
+        },
+        "accounting_general_ledger_sub_menu_item": {
+            "code": "accgl_smi",
+            "name": "accounting general ledger sub menu item",
+            "description": "accounting general ledger sub menu item"
+        },
+        "accounting_chart_of_accounts_sub_menu_item": {
+            "code": "accoa_smi",
+            "name": "accounting chart of accounts sub menu item",
+            "description": "accounting chart of accounts sub menu item"
+        },
+        "accounting_payment_types_sub_menu_item": {
+            "code": "accpt_smi",
+            "name": "accounting payment types sub menu item",
+            "description": "accounting payment types sub menu item"
+        },
+        "reports_menu_item": {
+            "code": "rpts_mi",
+            "name": "reports menu item",
+            "description": "reports menu item"
+        },
+        "reports_assets_sub_menu_item": {
+            "code": "rptsass_smi",
+            "name": "reports assets sub menu item",
+            "description": "reports assets sub menu item"
+        },
+        "reports_assets_register_sub_menu_item": {
+            "code": "rptsreg_smi",
+            "name": "reports assets register sub menu item",
+            "description": "reports assets register sub menu item"
+        },
+        "reports_assets_purchases_sub_menu_item": {
+            "code": "rptspurch_smi",
+            "name": "reports assets purchases sub menu item",
+            "description": "reports assets purchases sub menu item"
+        },
+        "reports_assets_impairments_sub_menu_item": {
+            "code": "rptsimp_smi",
+            "name": "reports assets impairments sub menu item",
+            "description": "reports assets impairments sub menu item"
+        },
+        "reports_assets_maintainance_sub_menu_item": {
+            "code": "rptsmtn_smi",
+            "name": "reports assets maintainance sub menu item",
+            "description": "reports assets maintainance sub menu item"
+        },
+        "reports_inventory_sub_menu_item": {
+            "code": "rptsinv_smi",
+            "name": "reports inventory sub menu item",
+            "description": "reports inventory sub menu item"
+        },
+        "reports_inventory_inventory_sub_menu_item": {
+            "code": "rptsinvinv_smi",
+            "name": "reports inventory inventory sub menu item",
+            "description": "reports inventory inventory sub menu item"
+        },
+        "reports_inventory_purchases_sub_menu_item": {
+            "code": "rptsinvpurc_smi",
+            "name": "reports inventory purchases sub menu item",
+            "description": "reports inventory purchases sub menu item"
+        },
+        "reports_inventory_requisitions_sub_menu_item": {
+            "code": "rptsinvreq_smi",
+            "name": "reports inventory requisitions sub menu item",
+            "description": "reports inventory requisitions sub menu item"
+        },
+        "reports_inventory_transfers_sub_menu_item": {
+            "code": "rptsinvtras_smi",
+            "name": "reports inventory transfers sub menu item",
+            "description": "reports inventory transfers sub menu item"
+        },
+        "reports_financial_sub_menu_item": {
+            "code": "rptsfin_smi",
+            "name": "reports financial sub menu item",
+            "description": "reports financial sub menu item"
+        },
+        "reports_financial_balance_sub_menu_item": {
+            "code": "rptsfinbal_smi",
+            "name": "reports financial balance sub menu item",
+            "description": "reports financial balance sub menu item"
+        },
+        "reports_financial_income_sub_menu_item": {
+            "code": "rptsfininc_smi",
+            "name": "reports financial income statment sub menu item",
+            "description": "reports financial income statment sub menu item"
+        },
+        "settings_menu_item": {
+            "code": "stng_mi",
+            "name": "settings menu item",
+            "description": "settings menu item"
+        },
+        "settings_system_users_sub_menu_item": {
+            "code": "stng_smi",
+            "name": "settings system users sub menu item",
+            "description": "settings system users sub menu item"
+        },
+        "settings_branches_sub_menu_item": {
+            "code": "stngbrch_smi",
+            "name": "settings branches sub menu item",
+            "description": "settings branches sub menu item"
+        },
+        "settings_sites_sub_menu_item": {
+            "code": "stngsites_smi",
+            "name": "settings sites sub menu item",
+            "description": "settings sites sub menu item"
+        },
+        "settings_departments_sub_menu_item": {
+            "code": "stngdep_smi",
+            "name": "settings departments sub menu item",
+            "description": "settings departments sub menu item"
+        }
+    }
+}

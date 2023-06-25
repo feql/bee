@@ -1,0 +1,3512 @@
+{
+    "version": "1.0.0",
+    "hive_of_a": "BaaS",
+    "app_name": "feql",
+    "combs": {
+        "config": {
+            "name": [
+                "vcnn",
+                30
+            ],
+            "company_name": [
+                "vcnn",
+                30
+            ],
+            "is_active": [
+                "inn",
+                30
+            ],
+            "logo": [
+                "tn"
+            ],
+            "city": [
+                "tn"
+            ],
+            "country": [
+                "tn"
+            ],
+            "phone": [
+                "tn"
+            ],
+            "fax": [
+                "tn"
+            ],
+            "email": [
+                "tn"
+            ],
+            "address": [
+                "tn"
+            ],
+            "website": [
+                "tn"
+            ],
+            "company_type": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "onboarding_step1_branches": [
+                "vcnn",
+                30
+            ],
+            "onboarding_step2_sites": [
+                "vcnn",
+                30
+            ],
+            "onboarding_step3_system_users": [
+                "vcnn",
+                30
+            ],
+            "onboarding_step4_chart_of_accounts": [
+                "vcnn",
+                30
+            ],
+            "onboarding_step5_asset_categories": [
+                "vcnn",
+                30
+            ],
+            "onboarding_step6_upload_assets": [
+                "vcnn",
+                30
+            ],
+            "decimal_places": [
+                "inn_d",
+                30,
+                1
+            ],
+            "currency": [
+                "vcnn_d",
+                30,
+                "ugx"
+            ],
+            "bank_name": [
+                "tn"
+            ],
+            "bank_branch_name": [
+                "tn"
+            ],
+            "bank_account_name": [
+                "tn"
+            ],
+            "bank_account_number": [
+                "tn"
+            ],
+            "upcomingrepair": [
+                "inn_d",
+                30,
+                5
+            ],
+            "missedrepair": [
+                "inn_d",
+                30,
+                5
+            ],
+            "depreciation": [
+                "inn_d",
+                30,
+                50
+            ],
+            "_comments": [
+                "name: the name of the configuration",
+                "is_active: by default its active, the user needs to make sure that there is only one active config"
+            ]
+        },
+        "user": {
+            "name": [
+                "vcnn",
+                30
+            ],
+            "email": [
+                "vcnn",
+                30
+            ],
+            "tenant_of": [
+                "tnn",
+                30
+            ],
+            "is_owner": [
+                "inn_d",
+                30,
+                0
+            ],
+            "password": [
+                "vcnn",
+                200
+            ],
+            "status": [
+                "vcnn",
+                30
+            ],
+            "code": [
+                "vcnn",
+                30
+            ],
+            "avatar": [
+                "tn_d",
+                30,
+                "bee\/images\/default_avatar_250.png"
+            ],
+            "country_id": [
+                "tn"
+            ],
+            "belongs_to_branch_id": [
+                "inn_d",
+                30,
+                1
+            ],
+            "last_seen_notification_id": [
+                "inn_d",
+                30,
+                0
+            ]
+        },
+        "role": {
+            "name": [
+                "vcnn",
+                30
+            ],
+            "description": [
+                "tn"
+            ]
+        },
+        "role_module": {
+            "role_id": [
+                "fk"
+            ],
+            "module_code": [
+                "vcnn",
+                30
+            ],
+            "status": [
+                "vcnn",
+                30
+            ],
+            "_comment": "accessible things like menu item links"
+        },
+        "role_permisiion": {
+            "role_id": [
+                "fk"
+            ],
+            "permission": [
+                "vcnn",
+                50
+            ],
+            "can_create": [
+                "inn",
+                30,
+                0
+            ],
+            "can_read": [
+                "inn",
+                30,
+                0
+            ],
+            "can_update": [
+                "inn",
+                30,
+                0
+            ],
+            "can_delete": [
+                "inn",
+                30,
+                0
+            ],
+            "_comment": "The individual action items"
+        },
+        "role_action": {
+            "role_id": [
+                "fk"
+            ],
+            "name": [
+                "tnn"
+            ],
+            "code": [
+                "vcnn",
+                100
+            ],
+            "description": [
+                "tn"
+            ]
+        },
+        "user_role": {
+            "user_id": [
+                "fk"
+            ],
+            "role_id": [
+                "fk"
+            ],
+            "status": [
+                "vcnn",
+                30
+            ]
+        },
+        "version": {
+            "name": [
+                "vcnn",
+                30
+            ]
+        },
+        "log": {
+            "route": [
+                "tn"
+            ],
+            "type": [
+                "tn"
+            ],
+            "crud_operation": [
+                "tn"
+            ],
+            "table": [
+                "tn"
+            ],
+            "role": [
+                "tn"
+            ],
+            "permissions": [
+                "tn"
+            ],
+            "json_data": [
+                "tn"
+            ],
+            "section_id": [
+                "tn"
+            ],
+            "affected_record_guid": [
+                "tn"
+            ],
+            "description": [
+                "tn"
+            ]
+        },
+        "trail": {
+            "who": [
+                "tn"
+            ],
+            "user_id": [
+                "tn"
+            ],
+            "activity": [
+                "tn"
+            ],
+            "role": [
+                "tn"
+            ],
+            "role_id": [
+                "tn"
+            ],
+            "description": [
+                "tn"
+            ]
+        },
+        "expense_category": {
+            "name": [
+                "vcnn",
+                30
+            ],
+            "description": [
+                "tn"
+            ]
+        },
+        "expense": {
+            "expense_category_id": [
+                "fk"
+            ],
+            "branch_id": [
+                "fk"
+            ],
+            "user_id": [
+                "fk"
+            ],
+            "description": [
+                "tnn"
+            ],
+            "issued_date": [
+                "vcnn",
+                30
+            ],
+            "issued_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "amount": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "debit_account_id": [
+                "fk"
+            ],
+            "credit_account_id": [
+                "fk"
+            ],
+            "transaction_id": [
+                "fk"
+            ]
+        },
+        "stockin": {
+            "user_id": [
+                "fk"
+            ],
+            "stockin_date": [
+                "vcnn",
+                30
+            ],
+            "expense_id": [
+                "fk"
+            ],
+            "stockin_date_time": [
+                "inn",
+                30
+            ],
+            "stockin_number": [
+                "vcnn",
+                30
+            ],
+            "description": [
+                "tn"
+            ],
+            "total_amount": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "is_from_trip": [
+                "inn_d",
+                30,
+                0
+            ],
+            "trip_id": [
+                "fk"
+            ],
+            "is_from_packaging": [
+                "inn_d",
+                30,
+                0
+            ],
+            "is_verified_a": [
+                "inn_d",
+                30,
+                0
+            ],
+            "is_verified_b": [
+                "inn_d",
+                30,
+                0
+            ],
+            "verify_a_user_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "verify_b_user_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "is_tallying": [
+                "inn_d",
+                30,
+                -1
+            ],
+            "is_fully_verified": [
+                "inn_d",
+                30,
+                0
+            ],
+            "_description": [
+                "was_credit_return: indicates if this stockout was originated from a credit product out activity",
+                "credit_product_out_id: the weak link to the credit out that was given in case this was from a credit",
+                "credit_product_return_id: weak link back to the activity"
+            ],
+            "shift": [
+                "vcnn_d",
+                10,
+                "day"
+            ],
+            "is_night_shift_refill": [
+                "inn_d",
+                30,
+                0
+            ]
+        },
+        "stockin_item": {
+            "product_id": [
+                "fk"
+            ],
+            "store_id": [
+                "fk"
+            ],
+            "stockin_id": [
+                "fk"
+            ],
+            "unit_id": [
+                "fk"
+            ],
+            "quantity": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "verification_quantity_a": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "verification_quantity_b": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "is_fully_verified": [
+                "inn_d",
+                30,
+                0
+            ],
+            "is_tallying": [
+                "inn_d",
+                30,
+                0
+            ],
+            "total_amount": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "unit_cost_price": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "is_from_trip": [
+                "inn_d",
+                30,
+                0
+            ],
+            "trip_id": [
+                "fk"
+            ],
+            "receive_date": [
+                "vcnn",
+                30
+            ],
+            "receive_date_time": [
+                "inn",
+                30
+            ],
+            "is_from_packaging": [
+                "inn_d",
+                30,
+                0
+            ],
+            "is_night_shift_refill": [
+                "inn_d",
+                30,
+                0
+            ]
+        },
+        "stockout": {
+            "user_id": [
+                "fk"
+            ],
+            "stockout_category_id": [
+                "fk"
+            ],
+            "stockout_date": [
+                "vcnn",
+                30
+            ],
+            "stockout_date_time": [
+                "inn",
+                30
+            ],
+            "stockout_number": [
+                "vcnn",
+                30
+            ],
+            "description": [
+                "tn"
+            ],
+            "total_amount": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "was_credit": [
+                "inn_d",
+                30,
+                0
+            ],
+            "credit_product_out_id": [
+                "fk"
+            ],
+            "is_from_trip": [
+                "inn_d",
+                30,
+                0
+            ],
+            "is_order": [
+                "inn_d",
+                30,
+                0
+            ],
+            "trip_id": [
+                "fk"
+            ],
+            "_description": [
+                "was_credit: indicates if this stockout was originated from a credit product out activity",
+                "credit_product_out_id: the weak link to the credit out that was given in case this was from a credit"
+            ]
+        },
+        "stockout_item": {
+            "product_id": [
+                "fk"
+            ],
+            "store_id": [
+                "fk"
+            ],
+            "stockout_id": [
+                "fk"
+            ],
+            "unit_id": [
+                "fk"
+            ],
+            "quantity_given_out": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "quantity_returned": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "quantity": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "total_amount": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "unit_price": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "was_credit": [
+                "inn_d",
+                30,
+                0
+            ],
+            "was_returned": [
+                "inn_d",
+                30,
+                0
+            ],
+            "credit_product_out_id": [
+                "fk"
+            ],
+            "credit_client_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "is_fully_paid": [
+                "inn_d",
+                30,
+                0
+            ],
+            "is_from_trip": [
+                "inn_d",
+                30,
+                0
+            ],
+            "trip_id": [
+                "fk"
+            ],
+            "receive_date": [
+                "vcnn",
+                30
+            ],
+            "receive_date_time": [
+                "inn",
+                30
+            ],
+            "is_order": [
+                "inn_d",
+                30,
+                0
+            ]
+        },
+        "stock_damage": {
+            "user_id": [
+                "fk"
+            ],
+            "store_id": [
+                "fk"
+            ],
+            "receive_date": [
+                "vcnn",
+                30
+            ],
+            "receive_date_time": [
+                "inn",
+                30
+            ],
+            "receipt_number": [
+                "vcnn",
+                30
+            ],
+            "description": [
+                "tn"
+            ],
+            "total_amount": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "is_from_trip": [
+                "inn_d",
+                30,
+                0
+            ],
+            "trip_id": [
+                "fk"
+            ]
+        },
+        "stock_damage_item": {
+            "product_id": [
+                "fk"
+            ],
+            "store_id": [
+                "fk"
+            ],
+            "stock_damage_id": [
+                "fk"
+            ],
+            "unit_id": [
+                "fk"
+            ],
+            "quantity": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "unit_price": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "total_amount": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "is_from_trip": [
+                "inn_d",
+                30,
+                0
+            ],
+            "trip_id": [
+                "fk"
+            ],
+            "receive_date": [
+                "vcnn",
+                30
+            ],
+            "receive_date_time": [
+                "inn",
+                30
+            ]
+        },
+        "stock_expired": {
+            "user_id": [
+                "fk"
+            ],
+            "store_id": [
+                "fk"
+            ],
+            "receive_date": [
+                "vcnn",
+                30
+            ],
+            "receive_date_time": [
+                "inn",
+                30
+            ],
+            "receipt_number": [
+                "vcnn",
+                30
+            ],
+            "description": [
+                "tn"
+            ],
+            "total_amount": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "is_from_trip": [
+                "inn_d",
+                30,
+                0
+            ],
+            "trip_id": [
+                "fk"
+            ]
+        },
+        "stock_expired_item": {
+            "product_id": [
+                "fk"
+            ],
+            "store_id": [
+                "fk"
+            ],
+            "stock_expired_id": [
+                "fk"
+            ],
+            "unit_id": [
+                "fk"
+            ],
+            "quantity": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "unit_price": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "total_amount": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "is_from_trip": [
+                "inn_d",
+                30,
+                0
+            ],
+            "trip_id": [
+                "fk"
+            ],
+            "receive_date": [
+                "vcnn",
+                30
+            ],
+            "receive_date_time": [
+                "inn",
+                30
+            ]
+        },
+        "stock_expired_early": {
+            "user_id": [
+                "fk"
+            ],
+            "store_id": [
+                "fk"
+            ],
+            "receive_date": [
+                "vcnn",
+                30
+            ],
+            "receive_date_time": [
+                "inn",
+                30
+            ],
+            "receipt_number": [
+                "vcnn",
+                30
+            ],
+            "description": [
+                "tn"
+            ],
+            "total_amount": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "is_from_trip": [
+                "inn_d",
+                30,
+                0
+            ],
+            "trip_id": [
+                "fk"
+            ]
+        },
+        "stock_expired_early_item": {
+            "product_id": [
+                "fk"
+            ],
+            "store_id": [
+                "fk"
+            ],
+            "stock_expired_early_id": [
+                "fk"
+            ],
+            "unit_id": [
+                "fk"
+            ],
+            "quantity": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "unit_price": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "total_amount": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "is_from_trip": [
+                "inn_d",
+                30,
+                0
+            ],
+            "trip_id": [
+                "fk"
+            ],
+            "receive_date": [
+                "vcnn",
+                30
+            ],
+            "receive_date_time": [
+                "inn",
+                30
+            ]
+        },
+        "stockout_category": {
+            "name": [
+                "vcnn",
+                30
+            ],
+            "description": [
+                "tn"
+            ],
+            "auto_record_sales": [
+                "inn_d",
+                30,
+                0
+            ],
+            "transfers_stock": [
+                "inn_d",
+                30,
+                0
+            ]
+        },
+        "store": {
+            "name": [
+                "vcnn",
+                30
+            ],
+            "description": [
+                "tn"
+            ]
+        },
+        "reconciliation_form": {
+            "user_id": [
+                "fk"
+            ],
+            "fix_date": [
+                "vcnn",
+                30
+            ],
+            "fix_date_time": [
+                "inn",
+                30
+            ],
+            "description": [
+                "tn"
+            ],
+            "total_stock_value_fixed": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "is_applied": [
+                "dnn_d",
+                30,
+                0
+            ]
+        },
+        "stock_tally": {
+            "user_id": [
+                "fk"
+            ],
+            "reconciliation_form_id": [
+                "fk"
+            ],
+            "tally_date": [
+                "vcnn",
+                30
+            ],
+            "tally_date_time": [
+                "inn",
+                30
+            ],
+            "tally_number": [
+                "vcnn",
+                30
+            ],
+            "description": [
+                "tn"
+            ],
+            "tally_stock_value": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "is_balanced": [
+                "inn_d",
+                30,
+                0
+            ],
+            "is_resolved": [
+                "inn_d",
+                30,
+                0
+            ]
+        },
+        "stock_tally_item": {
+            "stock_tally_id": [
+                "fk"
+            ],
+            "product_id": [
+                "fk"
+            ],
+            "store_id": [
+                "fk"
+            ],
+            "unit_id": [
+                "fk"
+            ],
+            "expected_quantity": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "quantity": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "diff_quantity": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "unit_price": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "total_amount": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "description": [
+                "tn"
+            ],
+            "fix_action": [
+                "vcnn_d",
+                30,
+                "none"
+            ],
+            "fix_stockout_refid": [
+                "inn_d",
+                30,
+                0
+            ],
+            "fix_stockin_refid": [
+                "inn_d",
+                30,
+                0
+            ],
+            "fix_description": [
+                "tn"
+            ],
+            "current_stockin_quantity": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "current_stockout_quantity": [
+                "dnn_d",
+                30,
+                0
+            ]
+        },
+        "stock_transfer": {
+            "user_id": [
+                "fk"
+            ],
+            "store_id": [
+                "fk"
+            ],
+            "other_store_id": [
+                "fk"
+            ],
+            "stockin_id": [
+                "fk"
+            ],
+            "stockout_id": [
+                "fk"
+            ],
+            "transfer_date": [
+                "vcnn",
+                30
+            ],
+            "transfer_date_time": [
+                "inn",
+                30
+            ],
+            "transfer_number": [
+                "vcnn",
+                30
+            ],
+            "description": [
+                "tn"
+            ],
+            "transfer_stock_value": [
+                "dnn_d",
+                30,
+                0
+            ]
+        },
+        "country": {
+            "name": [
+                "vcnn",
+                30
+            ],
+            "code2": [
+                "vcnn",
+                30
+            ],
+            "code3": [
+                "tn"
+            ],
+            "flag": [
+                "tn"
+            ],
+            "status": [
+                "vcnn",
+                30
+            ]
+        },
+        "branch": {
+            "name": [
+                "vcnn",
+                30
+            ],
+            "location": [
+                "tn"
+            ]
+        },
+        "site": {
+            "branch_id": [
+                "fk"
+            ],
+            "name": [
+                "vcnn",
+                30
+            ],
+            "location": [
+                "tn"
+            ],
+            "remarks": [
+                "tn"
+            ]
+        },
+        "department": {
+            "name": [
+                "vcnn",
+                30
+            ],
+            "description": [
+                "tn"
+            ]
+        },
+        "custodian": {
+            "user_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "name": [
+                "vcnn",
+                30
+            ],
+            "contact": [
+                "tn"
+            ]
+        },
+        "account": {
+            "ref_no": [
+                "vcnn",
+                30
+            ],
+            "name": [
+                "vcnn",
+                30
+            ],
+            "type": [
+                "vcnn",
+                30
+            ],
+            "group": [
+                "vcnn",
+                30
+            ],
+            "statement_type": [
+                "vcnn",
+                30
+            ],
+            "account_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "description": [
+                "tn"
+            ]
+        },
+        "category": {
+            "debit_account_id": [
+                "fk"
+            ],
+            "credit_account_id": [
+                "fk"
+            ],
+            "category_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "name": [
+                "vcnn",
+                100
+            ],
+            "useful_years": [
+                "inn_d",
+                30,
+                0
+            ],
+            "description": [
+                "tn"
+            ],
+            "identifier": [
+                "vcnn",
+                150
+            ],
+            "short_name": [
+                "vcnn",
+                100
+            ]
+        },
+        "extra_field": {
+            "category_id": [
+                "fk"
+            ],
+            "name": [
+                "vcnn",
+                60
+            ],
+            "type": [
+                "vcnn",
+                60
+            ],
+            "is_required": [
+                "inn_d",
+                30,
+                0
+            ],
+            "units": [
+                "tn"
+            ]
+        },
+        "asset": {
+            "category_id": [
+                "fk"
+            ],
+            "identifier_number": [
+                "vcnn",
+                100
+            ],
+            "name": [
+                "vcnn",
+                60
+            ],
+            "is_shared": [
+                "inn_d",
+                30,
+                0
+            ],
+            "purchase_date": [
+                "vcnn",
+                30
+            ],
+            "purchase_date_time": [
+                "inn",
+                30
+            ],
+            "purchase_cost": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "useful_years": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "outof_service_date": [
+                "vcnn",
+                30
+            ],
+            "flag": [
+                "vcnn",
+                30
+            ],
+            "description": [
+                "tn"
+            ],
+            "condition": [
+                "vcnn",
+                60
+            ],
+            "status": [
+                "vcnn",
+                60
+            ]
+        },
+        "asset_extra_field": {
+            "asset_id": [
+                "fk"
+            ],
+            "extra_field_id": [
+                "fk"
+            ],
+            "value": [
+                "tn"
+            ],
+            "units": [
+                "tn"
+            ]
+        },
+        "allocation": {
+            "asset_id": [
+                "fk"
+            ],
+            "branch_id": [
+                "fk"
+            ],
+            "site_id": [
+                "fk"
+            ],
+            "department_id": [
+                "fk"
+            ],
+            "custodian_id": [
+                "fk"
+            ],
+            "return_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "allocation_condition": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "return_condition": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "status": [
+                "vcnn_d",
+                60,
+                "allocated"
+            ]
+        },
+        "upload_asset": {
+            "file_name": [
+                "tn"
+            ],
+            "total_rows": [
+                "inn_d",
+                30,
+                0
+            ],
+            "progess": [
+                "inn_d",
+                30,
+                0
+            ],
+            "status": [
+                "vcnn",
+                30
+            ]
+        },
+        "upload_asset_item": {
+            "upload_asset_id": [
+                "fk"
+            ],
+            "table_id": [
+                "vcnn",
+                30
+            ],
+            "source": [
+                "tn"
+            ],
+            "identifier": [
+                "tn"
+            ],
+            "name": [
+                "tn"
+            ],
+            "category_name": [
+                "tn"
+            ],
+            "upload_status": [
+                "tn"
+            ],
+            "upload_remarks": [
+                "tn"
+            ],
+            "has_errors": [
+                "tn"
+            ],
+            "excell_row_object": [
+                "tn"
+            ]
+        },
+        "requisition": {
+            "asset_id": [
+                "fk"
+            ],
+            "user_id": [
+                "fk"
+            ],
+            "allocation_id": [
+                "fk"
+            ],
+            "requesters_name": [
+                "vcnn",
+                60
+            ],
+            "requesters_contact": [
+                "vcnn",
+                60
+            ],
+            "required_before_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "required_before_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "proposed_return_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "proposed_return_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "reason": [
+                "tn"
+            ],
+            "status": [
+                "vcnn_d",
+                60,
+                "pending"
+            ],
+            "approved_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "approved_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "approved_by_user_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "approval_notes": [
+                "tn"
+            ],
+            "rejected_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "rejected_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "rejected_by_user_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "rejected_notes": [
+                "tn"
+            ],
+            "collection_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "collection_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "collection_issued_by_user_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "collection_notes": [
+                "tn"
+            ],
+            "returned_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "returned_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "returned_recorded_by_user_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "returned_by_custodian_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "returned_notes": [
+                "tn"
+            ]
+        },
+        "support_document": {
+            "requisition_id": [
+                "fk"
+            ],
+            "name": [
+                "vcnn",
+                60
+            ],
+            "type": [
+                "vcnn",
+                60
+            ],
+            "link": [
+                "tn"
+            ]
+        },
+        "transfer": {
+            "issuing_branch_id": [
+                "fk"
+            ],
+            "receiving_branch_id": [
+                "fk"
+            ],
+            "title": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "scheduled_tansfer_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "scheduled_tansfer_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "transfer_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "transfer_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "transfer_notes": [
+                "tn"
+            ],
+            "approved_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "approved_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "approved_by_user_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "approval_notes": [
+                "tn"
+            ],
+            "issued_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "issued_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "issued_by_user_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "issued_notes": [
+                "tn"
+            ],
+            "received_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "received_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "received_notes": [
+                "tn"
+            ],
+            "received_by_user_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "rejected_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "rejected_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "rejected_by_user_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "rejected_notes": [
+                "tn"
+            ],
+            "no_of_assets": [
+                "inn_d",
+                30,
+                0
+            ],
+            "status": [
+                "vcnn_d",
+                60,
+                "pending"
+            ]
+        },
+        "transfer_asset": {
+            "transfer_id": [
+                "fk"
+            ],
+            "asset_id": [
+                "fk"
+            ],
+            "transfer_condition": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "receiving_condition": [
+                "vcnn_d",
+                30,
+                ""
+            ]
+        },
+        "transfer_support_document": {
+            "transfer_id": [
+                "fk"
+            ],
+            "name": [
+                "vcnn",
+                60
+            ],
+            "type": [
+                "vcnn",
+                60
+            ],
+            "link": [
+                "tn"
+            ]
+        },
+        "disposal_bucket_item": {
+            "asset_id": [
+                "fk"
+            ],
+            "branch_id": [
+                "fk"
+            ],
+            "type": [
+                "vcnn",
+                60
+            ],
+            "added_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "added_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "added_by_user_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "added_notes": [
+                "tn"
+            ],
+            "purchase_cost": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "useful_years": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "salvage_amount": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "current_value": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "status": [
+                "tn"
+            ],
+            "current_asset_status": [
+                "vcnn",
+                30
+            ],
+            "current_asset_condition": [
+                "vcnn",
+                30
+            ]
+        },
+        "disposal": {
+            "branch_id": [
+                "fk"
+            ],
+            "title": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "scheduled_disposal_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "scheduled_disposal_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "notes": [
+                "tn"
+            ],
+            "approved_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "approved_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "approved_by_user_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "approval_notes": [
+                "tn"
+            ],
+            "disposal_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "disposal_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "disposed_by_user_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "disposal_notes": [
+                "tn"
+            ],
+            "rejected_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "rejected_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "rejected_by_user_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "rejected_notes": [
+                "tn"
+            ],
+            "no_of_assets": [
+                "inn_d",
+                30,
+                0
+            ],
+            "total_assets_value": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "status": [
+                "vcnn_d",
+                60,
+                "pending"
+            ]
+        },
+        "disposal_asset": {
+            "disposal_id": [
+                "fk"
+            ],
+            "disposal_bucket_item_id": [
+                "fk"
+            ],
+            "asset_id": [
+                "fk"
+            ],
+            "type": [
+                "vcnn",
+                60
+            ],
+            "purchase_cost": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "useful_years": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "salvage_amount": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "current_value": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "disposal_condition": [
+                "vcnn_d",
+                30,
+                ""
+            ]
+        },
+        "disposal_support_document": {
+            "disposal_id": [
+                "fk"
+            ],
+            "name": [
+                "vcnn",
+                60
+            ],
+            "type": [
+                "vcnn",
+                60
+            ],
+            "link": [
+                "tn"
+            ]
+        },
+        "supplier": {
+            "name": [
+                "vcnn",
+                30
+            ],
+            "type": [
+                "vcnn_d",
+                30,
+                "business"
+            ],
+            "primary_contact": [
+                "vcnn",
+                30
+            ],
+            "other_contact": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "email": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "website": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "address": [
+                "vcnn_d",
+                100,
+                ""
+            ]
+        },
+        "acquisition_order": {
+            "branch_id": [
+                "fk"
+            ],
+            "supplier_id": [
+                "fk"
+            ],
+            "order_number": [
+                "vcnn",
+                30
+            ],
+            "type": [
+                "vcnn",
+                30
+            ],
+            "required_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "required_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "notes": [
+                "tn"
+            ],
+            "approved_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "approved_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "approved_by_user_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "approval_notes": [
+                "tn"
+            ],
+            "rejected_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "rejected_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "rejected_by_user_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "rejected_notes": [
+                "tn"
+            ],
+            "delivery_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "delivery_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "delivery_notes": [
+                "tn"
+            ],
+            "no_of_items": [
+                "inn_d",
+                30,
+                0
+            ],
+            "total_amount": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "grn_number": [
+                "vcnn",
+                30
+            ],
+            "checked_by_name": [
+                "tn"
+            ],
+            "status": [
+                "vcnn_d",
+                60,
+                "pending"
+            ]
+        },
+        "order_item": {
+            "acquisition_order_id": [
+                "fk"
+            ],
+            "name": [
+                "vcnn",
+                100
+            ],
+            "specifications": [
+                "tn"
+            ],
+            "unit_price": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "quantity": [
+                "inn_d",
+                30,
+                0
+            ],
+            "line_total_amount": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "quantity_delivered": [
+                "inn_d",
+                30,
+                0
+            ],
+            "quantity_rejected": [
+                "inn_d",
+                30,
+                0
+            ],
+            "rejection_comment": [
+                "tn"
+            ],
+            "status": [
+                "vcnn_d",
+                60,
+                "pending"
+            ],
+            "status_level": [
+                "inn_d",
+                60,
+                0
+            ],
+            "receive_package_identity_label": [
+                "vcnn_d",
+                100,
+                ""
+            ],
+            "is_rejected_resolved": [
+                "inn_d",
+                5,
+                0
+            ],
+            "resolve_rejection_comment": [
+                "tn"
+            ]
+        },
+        "order_support_document": {
+            "acquisition_order_id": [
+                "fk"
+            ],
+            "name": [
+                "vcnn",
+                60
+            ],
+            "type": [
+                "vcnn",
+                60
+            ],
+            "link": [
+                "tn"
+            ]
+        },
+        "order_recorded_asset": {
+            "order_item_id": [
+                "fk"
+            ],
+            "asset_id": [
+                "fk"
+            ],
+            "item_id_value": [
+                "vcnn_d",
+                100,
+                ""
+            ],
+            "asset_id_value": [
+                "vcnn_d",
+                100,
+                ""
+            ],
+            "recorded_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "recorded_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "recorded_by_user_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "recorded_notes": [
+                "tn"
+            ]
+        },
+        "sent_message": {
+            "send_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "send_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "body": [
+                "tn"
+            ],
+            "contact": [
+                "tn"
+            ],
+            "formated_contact": [
+                "tn"
+            ],
+            "is_success": [
+                "inn_d",
+                30,
+                0
+            ],
+            "response": [
+                "tn"
+            ],
+            "service": [
+                "tn"
+            ],
+            "context": [
+                "tn"
+            ],
+            "type": [
+                "tn"
+            ],
+            "identity": [
+                "tn"
+            ]
+        },
+        "notification": {
+            "sub_title": [
+                "tn"
+            ],
+            "title": [
+                "tn"
+            ],
+            "details": [
+                "tn"
+            ],
+            "created_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "created_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "type": [
+                "tn"
+            ],
+            "user_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "is_read_updatable": [
+                "inn_d",
+                30,
+                0
+            ],
+            "is_seen": [
+                "inn_d",
+                30,
+                0
+            ]
+        },
+        "maintainance_work_type": {
+            "name": [
+                "vcnn",
+                100
+            ],
+            "debit_account_id": [
+                "fk"
+            ],
+            "credit_account_id": [
+                "fk"
+            ],
+            "description": [
+                "tn"
+            ],
+            "life_time_increase_days": [
+                "inn_d",
+                30,
+                0
+            ]
+        },
+        "maintenance": {
+            "asset_id": [
+                "fk"
+            ],
+            "type": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "status": [
+                "vcnn_d",
+                60,
+                "pending"
+            ],
+            "last_maintenance_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "last_maintenance_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "scheduled_maintenance_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "scheduled_maintenance_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "maintenance_notes": [
+                "tn"
+            ],
+            "next_maintenance_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "next_maintenance_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "total_amount": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "total_life_time_gained_days": [
+                "inn_d",
+                30,
+                0
+            ],
+            "before_maintenance_outof_service_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "after_maintenance_outof_service_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "approved_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "approved_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "approved_by_user_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "approval_notes": [
+                "tn"
+            ],
+            "approval_time_condition": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "approval_time_status": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "rejected_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "rejected_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "rejected_by_user_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "rejected_notes": [
+                "tn"
+            ],
+            "recalled_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "recalled_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "recalled_by_user_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "recalled_asset_return_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "recalled_asset_return_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "recalled_notes": [
+                "tn"
+            ],
+            "returned_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "returned_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "returned_notes": [
+                "tn"
+            ],
+            "returned_by_user_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "returned_by_custodian_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "returned_condition": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "returned_status": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "budgeted_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "budgeted_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "budgeted_by_user_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "budget_approved_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "budget_approved_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "budget_approved_by_user_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "budget_approved_notes": [
+                "tn"
+            ],
+            "budget_rejected_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "budget_rejected_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "budget_rejected_by_user_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "budget_rejected_notes": [
+                "tn"
+            ],
+            "finished_condition": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "performed_maintenance_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "performed_maintenance_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "performed_by_user_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "performed_notes": [
+                "tn"
+            ]
+        },
+        "performed_work": {
+            "maintenance_id": [
+                "fk"
+            ],
+            "maintainance_work_type_id": [
+                "fk"
+            ],
+            "name": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "unit_cost": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "quantity": [
+                "inn_d",
+                30,
+                0
+            ],
+            "line_total_amount": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "notes": [
+                "tn"
+            ]
+        },
+        "maintenance_support_document": {
+            "maintenance_id": [
+                "fk"
+            ],
+            "name": [
+                "vcnn",
+                60
+            ],
+            "type": [
+                "vcnn",
+                60
+            ],
+            "link": [
+                "tn"
+            ]
+        },
+        "bg_scanner_work": {
+            "scanner_identity": [
+                "vcnn",
+                30
+            ],
+            "entry_date": [
+                "vcnn",
+                30
+            ],
+            "entry_date_time": [
+                "inn",
+                30
+            ],
+            "number_of_assets_to_scan": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "number_finished": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "number_pending": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "progress": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "asset_ids_array": [
+                "tn"
+            ],
+            "last_asset_id_index_processed": [
+                "tn"
+            ],
+            "last_asset_id_index_process_status": [
+                "tn"
+            ]
+        },
+        "value_trend": {
+            "bg_scanner_work_id": [
+                "fk"
+            ],
+            "asset_id": [
+                "fk"
+            ],
+            "entry_date": [
+                "vcnn",
+                30
+            ],
+            "entry_date_time": [
+                "inn",
+                30
+            ],
+            "purchase_date": [
+                "vcnn",
+                30
+            ],
+            "purchase_date_time": [
+                "inn",
+                30
+            ],
+            "purchase_cost": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "useful_years": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "salvage_amount": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "duration_in_days": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "days_in_year_used": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "daily_depreciation": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "total_depreciation": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "current_value": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "outof_service_date": [
+                "vcnn",
+                30
+            ],
+            "outof_service_date_time": [
+                "inn",
+                30
+            ],
+            "condition": [
+                "vcnn",
+                60
+            ],
+            "method_used_to_calculate": [
+                "vcnn",
+                60
+            ],
+            "category_id": [
+                "fk"
+            ],
+            "debit_account_id": [
+                "fk"
+            ],
+            "credit_account_id": [
+                "fk"
+            ],
+            "account_transaction_id": [
+                "fk"
+            ]
+        },
+        "bg_scanner_log": {
+            "bg_scanner_work_id": [
+                "fk"
+            ],
+            "status": [
+                "tn"
+            ],
+            "last_reached_process_stage": [
+                "tn"
+            ],
+            "responses": [
+                "tn"
+            ],
+            "entry_date": [
+                "vcnn",
+                30
+            ],
+            "entry_date_time": [
+                "inn",
+                30
+            ]
+        },
+        "impairment": {
+            "asset_id": [
+                "fk"
+            ],
+            "custodian_id": [
+                "fk"
+            ],
+            "type": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "status": [
+                "vcnn_d",
+                60,
+                "pending"
+            ],
+            "occured_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "occured_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "impairment_value_amount": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "asset_condition": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "notes": [
+                "tn"
+            ],
+            "approved_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "approved_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "approved_by_user_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "approval_notes": [
+                "tn"
+            ],
+            "rejected_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "rejected_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "rejected_by_user_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "rejected_notes": [
+                "tn"
+            ],
+            "debit_account_id": [
+                "fk"
+            ],
+            "credit_account_id": [
+                "fk"
+            ],
+            "transaction_id": [
+                "fk"
+            ]
+        },
+        "impairment_support_document": {
+            "impairment_id": [
+                "fk"
+            ],
+            "name": [
+                "vcnn",
+                60
+            ],
+            "type": [
+                "vcnn",
+                60
+            ],
+            "link": [
+                "tn"
+            ]
+        },
+        "insurance": {
+            "asset_id": [
+                "fk"
+            ],
+            "supplier_id": [
+                "fk"
+            ],
+            "policy_number": [
+                "tn"
+            ],
+            "start_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "start_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "end_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "end_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "coverage": [
+                "tn"
+            ],
+            "limitation": [
+                "tn"
+            ],
+            "premium": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "deducatables": [
+                "dnn_d",
+                30,
+                0
+            ]
+        },
+        "insurance_support_document": {
+            "insurance_id": [
+                "fk"
+            ],
+            "name": [
+                "vcnn",
+                60
+            ],
+            "type": [
+                "vcnn",
+                60
+            ],
+            "link": [
+                "tn"
+            ]
+        },
+        "warranty": {
+            "asset_id": [
+                "fk"
+            ],
+            "supplier_id": [
+                "fk"
+            ],
+            "type": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "start_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "start_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "end_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "end_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "coverage": [
+                "tn"
+            ],
+            "limitation": [
+                "tn"
+            ],
+            "status": [
+                "vcnn_d",
+                60,
+                "active"
+            ]
+        },
+        "warranty_support_document": {
+            "warranty_id": [
+                "fk"
+            ],
+            "name": [
+                "vcnn",
+                60
+            ],
+            "type": [
+                "vcnn",
+                60
+            ],
+            "link": [
+                "tn"
+            ]
+        },
+        "transaction": {
+            "occured_date": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "occured_date_time": [
+                "inn_d",
+                30,
+                0
+            ],
+            "amount": [
+                "dnn_d",
+                30,
+                0
+            ],
+            "debit_account_id": [
+                "fk"
+            ],
+            "credit_account_id": [
+                "fk"
+            ],
+            "context": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "context_table": [
+                "vcnn_d",
+                30,
+                ""
+            ],
+            "context_table_id": [
+                "inn_d",
+                30,
+                0
+            ],
+            "explanation": [
+                "tn"
+            ]
+        },
+        "_hidden": [
+            "users__password",
+            "user__password"
+        ],
+        "_allowed": {
+            "get": [
+                "config",
+                "user",
+                "role",
+                "role_module",
+                "role_permisiion",
+                "role_action",
+                "user_role",
+                "user_denied_action",
+                "version",
+                "log",
+                "trail",
+                "expense_category",
+                "country"
+            ],
+            "post": [
+                "config",
+                "user",
+                "role",
+                "role_module",
+                "role_permisiion",
+                "role_action",
+                "user_role",
+                "user_denied_action",
+                "version",
+                "log",
+                "trail",
+                "expense_category"
+            ],
+            "update": [
+                "config",
+                "user",
+                "role",
+                "role_module",
+                "role_permisiion",
+                "role_action",
+                "user_role",
+                "user_denied_action",
+                "version",
+                "log",
+                "trail",
+                "expense_category"
+            ],
+            "delete": [
+                "config",
+                "user",
+                "role",
+                "role_module",
+                "role_permisiion",
+                "role_action",
+                "user_role",
+                "user_denied_action",
+                "version",
+                "log",
+                "trail",
+                "expense_category"
+            ]
+        },
+        "_migrate": {
+            "create": {
+                "_done_bee_migrated_from_0_to_1_upload_assets": [],
+                "_done_bee_migrated_from_0_to_1_upload_asset_items": [],
+                "_done_bee_migrated_from_1_to_2_custodians": [],
+                "_done_bee_migrated_from_4_to_5_requisitions": [],
+                "_done_bee_migrated_from_4_to_5_support_documents": [],
+                "_done_bee_migrated_from_9_to_10_transfer": [],
+                "_done_bee_migrated_from_9_to_10_transfer_asset": [],
+                "_done_bee_migrated_from_9_to_10_transfer_support_document": [],
+                "_done_bee_migrated_from_13_to_14_disposal_bucket_items": [],
+                "_done_bee_migrated_from_13_to_14_disposal_assets": [],
+                "_done_bee_migrated_from_13_to_14_disposal_support_documents": [],
+                "_done_bee_migrated_from_17_to_18_disposals": [],
+                "_done_bee_migrated_from_20_to_21_suppliers": [],
+                "_done_bee_migrated_from_20_to_21_acquisition_orders": [],
+                "_done_bee_migrated_from_20_to_21_order_items": [],
+                "_done_bee_migrated_from_21_to_22_order_support_documents": [],
+                "_done_bee_migrated_from_22_to_23_order_recorded_asset": [],
+                "_done_bee_migrated_from_24_to_25_sent_messages": [],
+                "_done_bee_migrated_from_24_to_25_notifications": [],
+                "_done_bee_migrated_from_27_to_28_maintainance_work_types": [],
+                "_done_bee_migrated_from_27_to_28_maintenance": [],
+                "_done_bee_migrated_from_27_to_28_performed_work": [],
+                "_done_bee_migrated_from_27_to_28_maintenance_support_document": [],
+                "_done_bee_migrated_from_34_to_35_bg_scanner_works": [],
+                "_done_bee_migrated_from_34_to_35_value_trends": [],
+                "_done_bee_migrated_from_34_to_35_bg_scanner_logs": [],
+                "_done_bee_migrated_from_35_to_36_impairments": [],
+                "_done_bee_migrated_from_35_to_36_impairment_support_documents": [],
+                "_done_bee_migrated_from_37_to_38_insurances": [],
+                "_done_bee_migrated_from_37_to_38_insurance_support_documents": [],
+                "_done_bee_migrated_from_37_to_38_warranty": [],
+                "_done_bee_migrated_from_37_to_38_warranty_support_documents": [],
+                "_done_bee_migrated_from_42_to_43_transactions": []
+            },
+            "_f_mf": [],
+            "seeds": [],
+            "add_section": {
+                "_done_bee_migrated_from_2_to_3_extra_field": [
+                    "category_id"
+                ],
+                "_done_bee_migrated_from_3_to_4_config": [
+                    "upcomingrepair",
+                    "missedrepair",
+                    "depreciation"
+                ],
+                "_done_bee_migrated_from_4_to_5_allocation": [
+                    "return_date",
+                    "purchase_date_time",
+                    "status"
+                ],
+                "_done_bee_migrated_from_5_to_6_requisition": [
+                    "rejected_date",
+                    "rejected_date_time",
+                    "rejected_by_user_id",
+                    "rejected_notes"
+                ],
+                "_done_bee_migrated_from_6_to_7_allocation": [
+                    "allocation_condition"
+                ],
+                "_done_bee_migrated_from_6_to_7_requisition": [
+                    "collection_date",
+                    "collection_date_time",
+                    "collection_issued_by_user_id",
+                    "collection_notes"
+                ],
+                "_done_bee_migrated_from_7_to_8_requisition": [
+                    "returned_date",
+                    "returned_date_time",
+                    "returned_recorded_by_user_id",
+                    "returned_by_user_id",
+                    "returned_notes"
+                ],
+                "_done_bee_migrated_from_8_to_9_allocation": [
+                    "return_condition"
+                ],
+                "_done_bee_migrated_from_10_to_11_transfer": [
+                    "no_of_assets"
+                ],
+                "_done_bee_migrated_from_11_to_12_transfer": [
+                    "title"
+                ],
+                "_done_bee_migrated_from_12_to_13_transfer": [
+                    "rejected_date",
+                    "rejected_date_time",
+                    "rejected_by_user_id",
+                    "rejected_notes"
+                ],
+                "_done_bee_migrated_from_14_to_15_disposal_bucket_item": [
+                    "branch_id"
+                ],
+                "_done_bee_migrated_from_15_to_16_user": [
+                    "belongs_to_branch_id"
+                ],
+                "_done_bee_migrated_from_16_to_17_disposal_bucket_item": [
+                    "current_asset_condition"
+                ],
+                "_done_bee_migrated_from_18_to_19_disposal": [
+                    "rejected_date"
+                ],
+                "_done_bee_migrated_from_19_to_20_category": [
+                    "category_id"
+                ],
+                "_done_bee_migrated_from_23_to_24_order_item": [
+                    "is_rejected_resolved",
+                    "resolve_rejection_comment"
+                ],
+                "_done_bee_migrated_from_25_to_26_sent_message": [
+                    "identity"
+                ],
+                "_done_bee_migrated_from_26_to_27_user": [
+                    "last_seen_notification_id"
+                ],
+                "_done_bee_migrated_from_28_to_29_maintenance": [
+                    "budget_approved_date",
+                    "budget_approved_date_time",
+                    "budget_approved_by_user_id",
+                    "budget_approved_notes",
+                    "budget_rejected_date",
+                    "budget_rejected_date_time",
+                    "budget_rejected_by_user_id",
+                    "budget_rejected_notes"
+                ],
+                "_done_bee_migrated_from_29_to_30_maintenance": [
+                    "approval_time_condition",
+                    "approval_time_status"
+                ],
+                "_done_bee_migrated_from_30_to_31_maintenance": [
+                    "recalled_date",
+                    "recalled_date_time",
+                    "recalled_by_user_id",
+                    "recalled_asset_return_date",
+                    "recalled_asset_return_date_time",
+                    "recalled_notes",
+                    "returned_date",
+                    "returned_date_time",
+                    "returned_notes",
+                    "returned_by_user_id",
+                    "returned_condition",
+                    "returned_status"
+                ],
+                "_done_bee_migrated_from_31_to_32_maintenance": [
+                    "returned_by_custodian_id"
+                ],
+                "_done_bee_migrated_from_32_to_33_maintenance": [
+                    "budgeted_date",
+                    "budgeted_date_time",
+                    "budgeted_by_user_id"
+                ],
+                "_done_bee_migrated_from_33_to_34_maintenance": [
+                    "finished_condition"
+                ],
+                "_done_bee_migrated_from_36_to_37_impairment": [
+                    "debit_account_id",
+                    "credit_account_id",
+                    "transaction_id"
+                ],
+                "_done_bee_migrated_from_38_to_39_account": [
+                    "account_id"
+                ],
+                "_done_bee_migrated_from_39_to_40_account": [
+                    "description"
+                ],
+                "_done_bee_migrated_from_40_to_41_expense": [
+                    "debit_account_id",
+                    "credit_account_id",
+                    "transaction_id"
+                ],
+                "_done_bee_migrated_from_41_to_42_expense": [
+                    "branch_id"
+                ],
+                "_done_bee_migrated_from_43_to_44_category": [
+                    "short_name"
+                ]
+            },
+            "round": 44
+        }
+    },
+    "seeds": {
+        "configs": [
+            {
+                "name": "Main Configuration",
+                "company_name": "My Company",
+                "is_active": 1,
+                "decimal_places": 2,
+                "logo": "",
+                "city": "My City",
+                "country": "My Country",
+                "phone": "My Phone Number",
+                "fax": "My Fax Number",
+                "email": "companyemail@gmail.com",
+                "address": "Plot 1 My Street",
+                "website": "http:\/\/www.plotx.com",
+                "onboarding_step1_branches": "pending",
+                "onboarding_step2_sites": "pending",
+                "onboarding_step3_system_users": "pending",
+                "onboarding_step4_chart_of_accounts": "pending",
+                "onboarding_step5_asset_categories": "pending",
+                "onboarding_step6_upload_assets": "pending"
+            }
+        ],
+        "stores": [
+            {
+                "name": "shelf"
+            }
+        ],
+        "stockout_categories": [
+            {
+                "name": "sale",
+                "description": "saling of products, affects both sales and quantitites",
+                "auto_record_sales": 1,
+                "transfers_stock": 0
+            },
+            {
+                "name": "stock transfer",
+                "description": "moving products from one store to another, affects only quantitites",
+                "auto_record_sales": 0,
+                "transfers_stock": 1
+            },
+            {
+                "name": "remove only",
+                "description": "removing products from the store, affects only quantitites",
+                "auto_record_sales": 0,
+                "transfers_stock": 0
+            },
+            {
+                "name": "reconciliation",
+                "description": "applied during reconciliation of stock count",
+                "auto_record_sales": 0,
+                "transfers_stock": 0
+            }
+        ],
+        "expense_categories": [
+            {
+                "name": "stockin",
+                "description": "money, spent on purchase of goods\/products"
+            },
+            {
+                "name": "allowances",
+                "description": "operations allowances"
+            }
+        ],
+        "countries": [
+            {
+                "name": "uganda",
+                "code2": "UG",
+                "code3": "UGA",
+                "status": "active"
+            }
+        ],
+        "roles": [
+            {
+                "name": "Asset Manager",
+                "description": ""
+            },
+            {
+                "name": "Head Of Accounts",
+                "description": ""
+            },
+            {
+                "name": "Store Manager",
+                "description": ""
+            },
+            {
+                "name": "Company Staff",
+                "description": "A general company staff"
+            }
+        ],
+        "branches": [
+            {
+                "name": "Main Branch",
+                "location": ""
+            }
+        ],
+        "sites": [
+            {
+                "_fk_branch_id": "branches@0",
+                "name": "Main site",
+                "location": "The main officee building",
+                "remarks": "default site"
+            }
+        ],
+        "departments": [
+            {
+                "name": "Marketing",
+                "description": ""
+            },
+            {
+                "name": "Sales",
+                "description": ""
+            },
+            {
+                "name": "Finance",
+                "description": ""
+            },
+            {
+                "name": "Operations",
+                "description": ""
+            },
+            {
+                "name": "Human Resource",
+                "description": ""
+            },
+            {
+                "name": "IT",
+                "description": ""
+            },
+            {
+                "name": "Management",
+                "description": ""
+            }
+        ],
+        "categories": [
+            {
+                "debit_account_id": 0,
+                "credit_account_id": 0,
+                "name": "Permanent Buildings",
+                "useful_years": 40,
+                "description": "UBID - Unique Building Identifier is a key used to uinquely identify buidlings ",
+                "identifier": "UBID",
+                "short_name": "Prm. Buildings"
+            },
+            {
+                "debit_account_id": 0,
+                "credit_account_id": 0,
+                "name": "Temporary Buildings",
+                "useful_years": 3,
+                "description": "UBID - Unique Building Identifier is a key used to uinquely identify buidlings",
+                "identifier": "UBID",
+                "short_name": "Tmp. Buildings"
+            },
+            {
+                "debit_account_id": 0,
+                "credit_account_id": 0,
+                "name": "Land",
+                "useful_years": -1,
+                "description": "Land doesnot depreciate",
+                "identifier": "Plot Number",
+                "short_name": "Land"
+            },
+            {
+                "debit_account_id": 0,
+                "credit_account_id": 0,
+                "name": "Computer Equipment",
+                "useful_years": 3,
+                "description": "",
+                "identifier": "Serial Number",
+                "short_name": "Cmp. Eqpment"
+            },
+            {
+                "debit_account_id": 0,
+                "credit_account_id": 0,
+                "name": "Office Equipment",
+                "useful_years": 3,
+                "description": "",
+                "identifier": "Tag Number",
+                "short_name": "Off. Eqpment"
+            },
+            {
+                "debit_account_id": 0,
+                "credit_account_id": 0,
+                "name": "Office Fixtures and Fittings",
+                "useful_years": 5,
+                "description": "",
+                "identifier": "Tag Number",
+                "short_name": "Off. Fixtures"
+            },
+            {
+                "debit_account_id": 0,
+                "credit_account_id": 0,
+                "name": "Security and Safety Equipment",
+                "useful_years": 3,
+                "description": "",
+                "identifier": "Tag Number",
+                "short_name": "Sec. Eqpment"
+            },
+            {
+                "debit_account_id": 0,
+                "credit_account_id": 0,
+                "name": "Motor Vehicles",
+                "useful_years": 5,
+                "description": "",
+                "identifier": "Number Plate",
+                "short_name": "Vehicles"
+            },
+            {
+                "debit_account_id": 0,
+                "credit_account_id": 0,
+                "name": "Workshop Equipment",
+                "useful_years": 3,
+                "description": "",
+                "identifier": "Tag Number",
+                "short_name": "Wk. Eqpment"
+            },
+            {
+                "debit_account_id": 0,
+                "credit_account_id": 0,
+                "name": "Software Acquired Externally",
+                "useful_years": 3,
+                "description": "Software purchased from vendors",
+                "identifier": "Liscence Number",
+                "short_name": "Ext. Sftware"
+            },
+            {
+                "debit_account_id": 0,
+                "credit_account_id": 0,
+                "name": "Internally Developed Software",
+                "useful_years": 6,
+                "description": "When an establishment builds its own software",
+                "identifier": "Liscence Number",
+                "short_name": "Int. Sftware"
+            },
+            {
+                "debit_account_id": 0,
+                "credit_account_id": 0,
+                "name": "Liscences and Rights, Copyrights ",
+                "useful_years": 3,
+                "description": "And also Other Intangible assets",
+                "identifier": "Liscence Number",
+                "short_name": "Liscences"
+            }
+        ]
+    },
+    "allow_password_update": true,
+    "is_registration_public": true,
+    "is_signup_public": false,
+    "is_signup_send_activation_code": true,
+    "_f_register": {
+        "app_name": "myassetcompany",
+        "name": "FN LN",
+        "email": "mycompany@gmail.com",
+        "country": "uganda",
+        "phone_number": "0700000000",
+        "password": "qwerty"
+    },
+    "is_registration_offline": false,
+    "upload_files_with_post_data": true,
+    "upload": {
+        "user": {
+            "avatar": {
+                "_to": "uploads\/avatars\/"
+            }
+        },
+        "config": {
+            "logo": {
+                "_to": "uploads\/logos\/"
+            }
+        },
+        "support_document": {
+            "link": {
+                "_to": "uploads\/requisitions_support_docs\/"
+            }
+        }
+    },
+    "is_restricted": true,
+    "sudo_delete": true,
+    "drone_security_enabled": true,
+    "use_ui_security_only": true,
+    "use_api_roles_security": true,
+    "send_activation_email": true,
+    "register_as_active": false,
+    "activation_email_subject": "My Company Activation Link",
+    "recovery_email_subject": "My Company password recovery link",
+    "password_email_subject": "My Company user password",
+    "activation_link": "---",
+    "reset_link": "---",
+    "sendgrid": {
+        "username": "mycompany@gmail.com",
+        "sender": "mycompany@gmail.com",
+        "password": "qwerty"
+    },
+    "_f_br": {
+        "delete_items": "funcs\/",
+        "dependence_report": "funcs\/",
+        "process_stock_count": "funcs\/",
+        "dashboard": "funcs\/"
+    },
+    "weavyio": {
+        "server_to_server_key": "wys_Q9bafOuIYVhGervl90B17R6FsLhnlo0kjTnI",
+        "name": "MpSola File Storage Tests",
+        "expires": "Jul 20, 2023"
+    },
+    "domain": ""
+}
