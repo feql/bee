@@ -44,24 +44,24 @@ function create_new_project(){
 
 
     // //create a subdomain for the app
-    // $feql_baas_domain = getenv("FEQL_BAAS_DOMAIN");
-    // $feql_baas_hosting_api = getenv("FEQL_BAAS_HOSTING_IP");
-    // $app_sub_domain = "$app_name.$feql_baas_domain";
-    // // $subdomain_res = create_sub_domain($app_sub_domain, "A", $feql_baas_hosting_api, $app_name);
-    // // if($subdomain_res[0] == 0){
-    // //     //cloudflare errors
-    // //     $BEE_BR_HONEY[BEE_RI] = [];
-    // //     $BEE_BR_HONEY[BEE_EI] = [$subdomain_res[1]];
-    // //     return false;
-    // // }
-    // $www_app_sub_domain = "www.$app_sub_domain";
-    // // $www_subdomain_res = create_sub_domain($www_app_sub_domain, "CNAME", $app_sub_domain, $app_name);
-    // // if($www_subdomain_res[0] == 0){
-    // //     //cloudflare errors
-    // //     $BEE_BR_HONEY[BEE_RI] = [];
-    // //     $BEE_BR_HONEY[BEE_EI] = [$subdomain_res[1]];
-    // //     return false;
-    // // }
+    $feql_baas_domain = getenv("FEQL_BAAS_DOMAIN");
+    $feql_baas_hosting_api = getenv("FEQL_BAAS_HOSTING_IP");
+    $app_sub_domain = "$app_name.$feql_baas_domain";
+    // $subdomain_res = create_sub_domain($app_sub_domain, "A", $feql_baas_hosting_api, $app_name);
+    // if($subdomain_res[0] == 0){
+    //     //cloudflare errors
+    //     $BEE_BR_HONEY[BEE_RI] = [];
+    //     $BEE_BR_HONEY[BEE_EI] = [$subdomain_res[1]];
+    //     return false;
+    // }
+    $www_app_sub_domain = "www.$app_sub_domain";
+    // $www_subdomain_res = create_sub_domain($www_app_sub_domain, "CNAME", $app_sub_domain, $app_name);
+    // if($www_subdomain_res[0] == 0){
+    //     //cloudflare errors
+    //     $BEE_BR_HONEY[BEE_RI] = [];
+    //     $BEE_BR_HONEY[BEE_EI] = [$subdomain_res[1]];
+    //     return false;
+    // }
 
     // //configure nginx
     // $nginx_sites_available_dir = "/sites_available/"; //getenv("FEQL_NGINX_SITES_AVAILABLE_DIR");
@@ -112,7 +112,7 @@ function create_new_project(){
     // file_put_contents($next_port_file, $updated_usages);
 
     // var_dump($docker_contents);
-    $BEE_BR_HONEY[BEE_RI] = ["ok", true]; //[$app_sub_domain]; //[$app_sub_domain, $subdomain_res, $www_subdomain_res];
+    $BEE_BR_HONEY[BEE_RI] = [$app_sub_domain, $www_app_sub_domain]; //[$app_sub_domain]; //[$app_sub_domain, $subdomain_res, $www_subdomain_res];
 }
 
 function create_sub_domain($name, $type, $point_to, $app_name) {
