@@ -22,25 +22,25 @@ function create_new_project(){
     }
 
     // // //next port
-    // $next_port_file = "/bee_realease_configs/next_port.txt";
-    // $last_port_usage = trim(fgets(fopen($next_port_file, 'r')));
-    // $usage_parts = explode(" ", $last_port_usage);
-    // $last_port = $usage_parts[2];
-    // $next_port = intval($last_port) + 1;
-    // $mysql_docker_port = $next_port;
-    // $phpmyadmin_docker_port = $next_port + 1;
-    // $bee_docker_port = $next_port + 2;
+    $next_port_file = "/bee_realease_configs/next_port.txt";
+    $last_port_usage = trim(fgets(fopen($next_port_file, 'r')));
+    $usage_parts = explode(" ", $last_port_usage);
+    $last_port = $usage_parts[2];
+    $next_port = intval($last_port) + 1;
+    $mysql_docker_port = $next_port;
+    $phpmyadmin_docker_port = $next_port + 1;
+    $bee_docker_port = $next_port + 2;
 
-    // // //edit dockerfile
-    // $docker_contents = file_get_contents($app_docker_compose_file_path);
-    // //replace feql_ with app_name_
-    // $docker_app_name = $app_name."_";
-    // $docker_contents = str_replace("feql_",  $docker_app_name, $docker_contents );
-    // //replace the ports
-    // $docker_contents = str_replace("4000",  $mysql_docker_port, $docker_contents );
-    // $docker_contents = str_replace("4001",  $phpmyadmin_docker_port, $docker_contents );
-    // $docker_contents = str_replace("4002",  $bee_docker_port, $docker_contents );
-    // file_put_contents($app_docker_compose_file_path, $docker_contents);
+    //edit dockerfile
+    $docker_contents = file_get_contents($app_docker_compose_file_path);
+    //replace feql_ with app_name_
+    $docker_app_name = $app_name."_";
+    $docker_contents = str_replace("feql_",  $docker_app_name, $docker_contents );
+    //replace the ports
+    $docker_contents = str_replace("4000",  $mysql_docker_port, $docker_contents );
+    $docker_contents = str_replace("4001",  $phpmyadmin_docker_port, $docker_contents );
+    $docker_contents = str_replace("4002",  $bee_docker_port, $docker_contents );
+    file_put_contents($app_docker_compose_file_path, $docker_contents);
 
 
     // //create a subdomain for the app

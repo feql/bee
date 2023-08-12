@@ -73,5 +73,7 @@ crontab -e
 And then adding
 @reboot /path/to/execpipe.sh
 
+ chmod a+rw -R ./bee_baas_releases/
+
 
  
