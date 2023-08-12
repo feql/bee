@@ -48,14 +48,15 @@ services:
         db_server_password: secret
         smsto_api_key: ""
         sendgrid_api_key: ""
-        bee_dir_path: "/Users/nyolamike/feql/bee/"
+        # bee_dir_path: "/Users/nyolamike/feql/bee/"
+        bee_dir_path: "/root/feql_project/bee/"
         cloudflare_api_token: ""
     volumes:
       - ./app/:/var/www/html/
       - /etc/localtime:/etc/localtime:ro
-      - /root/feql_project/created_bees/:/created_bees/
-      - /root/feql_project/bee_baas_releases/latest/:/latest_bee/
-      - /root/feql_project/bee_baas_releases/configs/:/bee_realease_configs/
+      - /feql_project/created_bees/:/created_bees/
+      - /feql_project/bee_baas_releases/latest/:/latest_bee/
+      - /feql_project/bee_baas_releases/configs/:/bee_realease_configs/
       - /etc/nginx/sites-available/:/sites_available/
       - /etc/nginx/sites-enabled/:/sites_enabled/
 
