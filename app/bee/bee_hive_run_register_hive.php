@@ -208,11 +208,8 @@ function hive_run_register_hive($post_nectoroid,$bee,$defaults=null){
         //seeding
         if(array_key_exists("seeds",$bee["BEE_HIVE_STRUCTURE"])){
             $seeds = $bee["BEE_HIVE_STRUCTURE"]["seeds"];
-            $currency = "";
+        
             $country = $post_nectoroid["_f_register"]["country"];
-            if($country == "uganda"){
-                $currency = "ugx";
-            }
             //config
             $seeds["configs"] = array(
                 array(
@@ -223,18 +220,11 @@ function hive_run_register_hive($post_nectoroid,$bee,$defaults=null){
                     "logo" =>  "",
                     "city" => "My City",
                     "country" =>  $country,
-                    "currency" => $currency,
                     "phone" =>  $post_nectoroid["_f_register"]["phone_number"],
                     "fax" =>  "My Fax Number",
                     "email" =>  $post_nectoroid["_f_register"]["email"],
                     "address" =>  "Plot 1 My Street",
                     "website" =>  "http:\/\/www.plotx.com",
-                    "onboarding_step1_branches" =>  "pending",
-                    "onboarding_step2_sites" =>  "pending",
-                    "onboarding_step3_system_users" =>  "pending",
-                    "onboarding_step4_chart_of_accounts" =>  "pending",
-                    "onboarding_step5_asset_categories" => "pending",
-                    "onboarding_step6_upload_assets" =>  "pending"
                 )
             );
             $brp_res3 = bee_run_post($seeds,$bee,0); //bee_hive_post($seeds,$combs,$bee["BEE_HIVE_CONNECTION"],0);

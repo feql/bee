@@ -14,7 +14,7 @@ services:
     volumes:
       - ./databases:/var/lib/mysql/data
     ports:
-      - 7788:3306
+      - 4000:3306
 
   feql_phpmyadmin_srv:
     container_name: feql_phpmyadmin_cnt
@@ -25,7 +25,7 @@ services:
      - PMA_PORT=3306
     restart: always
     ports:
-      - 7787:80
+      - 4001:80
     volumes:
       - ./phpmyadmin/sessions/:/www/sessions
       - ./phpmyadmin/config.user.inc.php:/etc/phpmyadmin/config.user.inc.php
@@ -38,19 +38,29 @@ services:
     build:
       context: .
       dockerfile: ./app/Dockerfile
+    env_file:
+      - .env
     environment:
         PHP_EXTENSION_GD: 1
         db_server_name: feql_mysql_srv
-        db_server_port: 3306
+        db_server_port: 4000
         db_server_user: root
         db_server_password: secret
         smsto_api_key: ""
         sendgrid_api_key: ""
+        bee_dir_path: "/Users/nyolamike/feql/bee/"
+        cloudflare_api_token: ""
     volumes:
       - ./app/:/var/www/html/
       - /etc/localtime:/etc/localtime:ro
+      - /Users/nyolamike/feql/created_bees/:/created_bees/
+      - /Users/nyolamike/feql/bee_baas_releases/latest/:/latest_bee/
+      - /Users/nyolamike/feql/bee_baas_releases/configs/:/bee_realease_configs/
+      - /Users/nyolamike/feql/bee_baas_releases/configs/feqpipe:/hostfeqpipe
+      - /private/etc/nginx/sites-available/:/sites_available/
+      - /private/etc/nginx/sites-enabled/:/sites_enabled/
     ports:
-      - 7786:80
+      - 4002:80
     depends_on:
       - feql_phpmyadmin_srv
 

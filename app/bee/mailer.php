@@ -66,18 +66,18 @@
         $parts = explode("=", $code);
         $code = $parts[count($parts) - 1];
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, 'https://api.mailgun.net/v3/sandbox773c56a068cb499bb33e12e6d3df3d7c.mailgun.org/messages');
+        curl_setopt($ch, CURLOPT_URL, 'https://api.mailgun.net/v3/sandboxab3718bb13ae4d288d998eb06d9a242c.mailgun.org/messages');
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_POST, 1);
         $post = array(
-            'from' => 'Mpola Asset Manager <postmaster@sandbox773c56a068cb499bb33e12e6d3df3d7c.mailgun.org>',
+            'from' => 'FQL <postmaster@sandboxab3718bb13ae4d288d998eb06d9a242c.mailgun.org>',
             'to' => $toname. '<'.$to.'>',
-            'subject' => 'Verification Code For Mpola Asset Manager',
-            'template' => 'account_verification_email',
+            'subject' => 'FQL Accivation Code',
+            'template' => 'feql account activation code',
             'h:X-Mailgun-Variables' => '{"name": "'.$toname.'", "code":"'.$code.'"}'
         );
         curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-        curl_setopt($ch, CURLOPT_USERPWD, 'api' . ':' . '642b54336d2badaada81babc25b97c4c-2de3d545-4f7e930b');
+        curl_setopt($ch, CURLOPT_USERPWD, 'api' . ':' . '67eebc866f0966908c6fc588e7367098-73f745ed-d91bb976');
 
         $response = curl_exec($ch);
         if (curl_errno($ch)) {

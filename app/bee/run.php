@@ -41,7 +41,7 @@
     $foo = array();
     $THIS_NODE = null; //used to pass immediate nodes to _f_sg_ functions in segmentation of attributes
     $BEE_SG_HONEY = null; //same as above but for the current honey values of that function
-
+    
 
 
     //load layers
@@ -98,6 +98,7 @@
     $db_server_user = getenv("db_server_user");
     $db_server_password = getenv("db_server_password");
     $db_port = 3306; //getenv("db_server_port");
+    $BEE_DIR_PATH = getenv("bee_dir_path");
 
     // $smsto_api_key = getenv("smsto_api_key");
     // $sendgrid_key = getenv("sendgrid_api_key");
@@ -117,6 +118,7 @@
     define("BEE_USER_NAME", (BEE_IS_IN_PRODUCTION ? $db_server_user : $db_server_user));
     define("BEE_PASSWORD", (BEE_IS_IN_PRODUCTION ? $db_server_password : $db_server_password));
     define("BEE_PORT", (BEE_IS_IN_PRODUCTION ? $db_port : $db_port));
+    define("BEE_DIR_PATH", $BEE_DIR_PATH);
     
     // define("SMSTO_API_KEY", $smsto_api_key);
     

@@ -1,2 +1,6 @@
 databases/
 phpmyadmin/
+created_bees/
+./created_bees/
+.env
+./.env
