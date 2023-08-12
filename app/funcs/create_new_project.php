@@ -91,7 +91,8 @@ function create_new_project(){
 
     //start docker containers for the project
     // $compose_up_cmd = "docker-compose up -d -f $app_docker_compose_file_path";
-    $compose_up_cmd = "docker ps";
+    // $compose_up_cmd = "docker ps";
+    $compose_up_cmd = 'echo "docker ps -a" > /bee_realease_configs/feqpipe';
     var_dump($compose_up_cmd);
     shell_exec($compose_up_cmd);
 
