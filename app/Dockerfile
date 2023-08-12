@@ -3,7 +3,7 @@ FROM thecodingmachine/php:7.4-v3-apache
 
 # RUN apt update && apt install openssh-client
 
-VOLUME /hostfeqpipe
+VOLUME /bee_realease_configs
 
 COPY . /var/www/html/
 

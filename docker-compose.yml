@@ -53,12 +53,17 @@ services:
     volumes:
       - ./app/:/var/www/html/
       - /etc/localtime:/etc/localtime:ro
-      - /Users/nyolamike/feql/created_bees/:/created_bees/
-      - /Users/nyolamike/feql/bee_baas_releases/latest/:/latest_bee/
-      - /Users/nyolamike/feql/bee_baas_releases/configs/:/bee_realease_configs/
-      - /Users/nyolamike/feql/bee_baas_releases/configs/feqpipe:/hostfeqpipe
-      - /private/etc/nginx/sites-available/:/sites_available/
-      - /private/etc/nginx/sites-enabled/:/sites_enabled/
+      - /root/feql_project/created_bees/:/created_bees/
+      - /root/feql_project/bee_baas_releases/latest/:/latest_bee/
+      - /root/feql_project/bee_baas_releases/configs/:/bee_realease_configs/
+      - /etc/nginx/sites-available/:/sites_available/
+      - /etc/nginx/sites-enabled/:/sites_enabled/
+
+      # - /Users/nyolamike/feql/created_bees/:/created_bees/
+      # - /Users/nyolamike/feql/bee_baas_releases/latest/:/latest_bee/
+      # - /Users/nyolamike/feql/bee_baas_releases/configs/:/bee_realease_configs/
+      # - /private/etc/nginx/sites-available/:/sites_available/
+      # - /private/etc/nginx/sites-enabled/:/sites_enabled/
     ports:
       - 4002:80
     depends_on:
