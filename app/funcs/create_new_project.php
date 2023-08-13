@@ -12,7 +12,7 @@ function create_new_project(){
     // //create a directory for the project
     $app_dir = "/created_bees/$app_name/";
     $app_docker_compose_file_path = $app_dir."docker-compose.yml";
-    $host_app_docker_compose_file_path = "~/feql_project/created_bees/$app_dir/docker-compose.yml";
+    $host_app_docker_compose_file_path = "~/feql_project/created_bees/$app_name/docker-compose.yml";
 
     //copy latest bee realease into this projects directory
     if(!file_exists($app_docker_compose_file_path)){
