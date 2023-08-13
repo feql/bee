@@ -87,6 +87,7 @@ function create_new_project(){
     //create certificates using certbot
     //sudo certbot --nginx -d example.com -d www.example.com
     $certbot_cmd_to_send = "sudo certbot --nginx -d $app_sub_domain -d $www_app_sub_domain";
+    var_dump("certbot_cmd_to_send:", $certbot_cmd_to_send);
     $certbot_cmd = 'echo "'.$certbot_cmd_to_send.'" > /bee_realease_configs/feqpipe';
     var_dump("certbot_cmd:", $certbot_cmd);
     shell_exec($certbot_cmd);
