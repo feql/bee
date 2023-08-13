@@ -84,19 +84,18 @@ function create_new_project(){
         shell_exec($link_cmd);
     }
 
-    // //create certificates using certbot
-    // //sudo certbot --nginx -d example.com -d www.example.com
-    // $certbot_cmd = "sudo certbot --nginx -d $app_sub_domain -d $www_app_sub_domain";
-    // var_dump($certbot_cmd);
-    // shell_exec($certbot_cmd);
+    //create certificates using certbot
+    //sudo certbot --nginx -d example.com -d www.example.com
+    $certbot_cmd_to_send = "sudo certbot --nginx -d $app_sub_domain -d $www_app_sub_domain";
+    $certbot_cmd = 'echo "'.$certbot_cmd_to_send.'" > /bee_realease_configs/feqpipe';
+    var_dump("certbot_cmd:", $certbot_cmd);
+    shell_exec($certbot_cmd);
 
     // //start docker containers for the project
     // $compose_up_cmd = 'echo "docker ps -a" > /bee_realease_configs/feqpipe';
-    $cmd_to_send = "docker-compose -f $host_app_docker_compose_file_path up -d";
-    var_dump("cmd_to_send", $cmd_to_send);
-    $compose_up_cmd = 'echo "'.$cmd_to_send.'" > /bee_realease_configs/feqpipe';
-    var_dump("compose_up_cmd", $compose_up_cmd);
-    shell_exec($compose_up_cmd);
+    // $cmd_to_send = "docker-compose -f $host_app_docker_compose_file_path up -d";
+    // $compose_up_cmd = 'echo "'.$cmd_to_send.'" > /bee_realease_configs/feqpipe';
+    // shell_exec($compose_up_cmd);
 
 
     // //restart nginx
