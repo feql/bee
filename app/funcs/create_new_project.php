@@ -48,6 +48,7 @@ function create_new_project(){
     $feql_baas_domain = getenv("FEQL_BAAS_DOMAIN");
     $feql_baas_hosting_api = getenv("FEQL_BAAS_HOSTING_IP");
     $app_sub_domain = "$app_name.$feql_baas_domain";
+    $app_sub_domain = str_replace("_", "-", $app_sub_domain); //domain name cnannot have an underscore _ 
     // $subdomain_res = create_sub_domain($app_sub_domain, "A", $feql_baas_hosting_api, $app_name);
     // if($subdomain_res[0] == 0){
     //     //cloudflare errors
@@ -56,6 +57,7 @@ function create_new_project(){
     //     return false;
     // }
     $www_app_sub_domain = "www.$app_sub_domain";
+    $www_app_sub_domain = str_replace("_", "-", $www_app_sub_domain);
     // $www_subdomain_res = create_sub_domain($www_app_sub_domain, "CNAME", $app_sub_domain, $app_name);
     // if($www_subdomain_res[0] == 0){
     //     //cloudflare errors
