@@ -49,22 +49,22 @@ function create_new_project(){
     $feql_baas_hosting_api = getenv("FEQL_BAAS_HOSTING_IP");
     $app_sub_domain = "$app_name.$feql_baas_domain";
     $app_sub_domain = str_replace("_", "-", $app_sub_domain); //domain name cnannot have an underscore _ 
-    // $subdomain_res = create_sub_domain($app_sub_domain, "A", $feql_baas_hosting_api, $app_name);
-    // if($subdomain_res[0] == 0){
-    //     //cloudflare errors
-    //     $BEE_BR_HONEY[BEE_RI] = [];
-    //     $BEE_BR_HONEY[BEE_EI] = [$subdomain_res[1]];
-    //     return false;
-    // }
+    $subdomain_res = create_sub_domain($app_sub_domain, "A", $feql_baas_hosting_api, $app_name);
+    if($subdomain_res[0] == 0){
+        //cloudflare errors
+        $BEE_BR_HONEY[BEE_RI] = [];
+        $BEE_BR_HONEY[BEE_EI] = [$subdomain_res[1]];
+        return false;
+    }
     $www_app_sub_domain = "www.$app_sub_domain";
     $www_app_sub_domain = str_replace("_", "-", $www_app_sub_domain);
-    // $www_subdomain_res = create_sub_domain($www_app_sub_domain, "CNAME", $app_sub_domain, $app_name);
-    // if($www_subdomain_res[0] == 0){
-    //     //cloudflare errors
-    //     $BEE_BR_HONEY[BEE_RI] = [];
-    //     $BEE_BR_HONEY[BEE_EI] = [$subdomain_res[1]];
-    //     return false;
-    // }
+    $www_subdomain_res = create_sub_domain($www_app_sub_domain, "CNAME", $app_sub_domain, $app_name);
+    if($www_subdomain_res[0] == 0){
+        //cloudflare errors
+        $BEE_BR_HONEY[BEE_RI] = [];
+        $BEE_BR_HONEY[BEE_EI] = [$subdomain_res[1]];
+        return false;
+    }
 
     // //configure nginx
     $nginx_sites_available_dir = "/sites_available/"; //getenv("FEQL_NGINX_SITES_AVAILABLE_DIR");
@@ -90,27 +90,25 @@ function create_new_project(){
         shell_exec($link_cmd);
     }
 
-    // //start docker containers for the project
-    // $compose_up_cmd = 'echo "docker ps -a" > /bee_realease_configs/feqpipe';
-    // $cmd_to_send = "docker-compose -f $host_app_docker_compose_file_path up -d";
-    // $compose_up_cmd = 'echo "'.$cmd_to_send.'" > /bee_realease_configs/feqpipe';
-    // shell_exec($compose_up_cmd);
+    //start docker containers for the project
+    $compose_up_cmd = 'echo "docker ps -a" > /bee_realease_configs/feqpipe';
+    $cmd_to_send = "docker-compose -f $host_app_docker_compose_file_path up -d";
+    $compose_up_cmd = 'echo "'.$cmd_to_send.'" > /bee_realease_configs/feqpipe';
+    shell_exec($compose_up_cmd);
 
-    // //restart nginx
-    // //https://stackoverflow.com/questions/7943684/nginx-can-i-add-a-new-virtual-host-without-restarting-the-server#:~:text=Yes%20you%20can.&text=Or%20you%20can%20send%20SIGHUP%20to%20the%20nginx%20process.&text=Read%20and%20test%20a%20new,configuration%20invalid%20then%20do%20nothing.
-    // //nginx -s reload
-    // //sudo kill -HUP [nginx's pid]
-    // $reload_nginx_cmd_to_send = "nginx -s reload";
-    // $reload_nginx_cmd = 'echo "'.$reload_nginx_cmd_to_send.'" > /bee_realease_configs/feqpipe';
-    // shell_exec($reload_nginx_cmd);
+    //restart nginx
+    //https://stackoverflow.com/questions/7943684/nginx-can-i-add-a-new-virtual-host-without-restarting-the-server#:~:text=Yes%20you%20can.&text=Or%20you%20can%20send%20SIGHUP%20to%20the%20nginx%20process.&text=Read%20and%20test%20a%20new,configuration%20invalid%20then%20do%20nothing.
+    //nginx -s reload
+    //sudo kill -HUP [nginx's pid]
+    $reload_nginx_cmd_to_send = "nginx -s reload";
+    $reload_nginx_cmd = 'echo "'.$reload_nginx_cmd_to_send.'" > /bee_realease_configs/feqpipe';
+    shell_exec($reload_nginx_cmd);
     
 
     //create certificates using certbot
     //sudo certbot --nginx -d example.com -d www.example.com
     $certbot_cmd_to_send = "sudo certbot --nginx -d $app_sub_domain -d $www_app_sub_domain";
-    var_dump($certbot_cmd_to_send);
     $certbot_cmd = 'echo "'.$certbot_cmd_to_send.'" > /bee_realease_configs/feqpipe';
-    var_dump($certbot_cmd);
     shell_exec($certbot_cmd);
 
     
