@@ -75,15 +75,12 @@ function create_new_project(){
         //replace port, the docker port of the bee for the app
         $ngix_config_contents = str_replace("{{port}}", $bee_docker_port, $ngix_config_contents);
         $xres = file_put_contents($app_nginx_config_file, $ngix_config_contents);
-        var_dump("xres", $xres);
         //create a symbolic link
         $nginx_sites_enabled_dir = "/sites_enabled/"; //getenv("FEQL_NGINX_SITES_AVAILABLE_DIR");
         $app_nginx_link_config_file = $nginx_sites_enabled_dir . $app_sub_domain.".conf";
         //sudo ln -s /etc/nginx/sites-available/your_domain /etc/nginx/sites-enabled/
         $link_cmd = "sudo ln -s $app_nginx_config_file  $app_nginx_link_config_file";
         shell_exec($link_cmd);
-    }else{
-        var_dump("file aleady exists ", $app_nginx_config_file);
     }
 
     // //create certificates using certbot
@@ -109,10 +106,10 @@ function create_new_project(){
     // //sudo kill -HUP [nginx's pid]
     
     // //save port usage for the next project
-    // $taken_usage = "$mysql_docker_port $phpmyadmin_docker_port $bee_docker_port $app_name\n";
-    // $usages = file_get_contents($next_port_file);
-    // $updated_usages = $taken_usage . $usages;
-    // file_put_contents($next_port_file, $updated_usages);
+    $taken_usage = "$mysql_docker_port $phpmyadmin_docker_port $bee_docker_port $app_name\n";
+    $usages = file_get_contents($next_port_file);
+    $updated_usages = $taken_usage . $usages;
+    file_put_contents($next_port_file, $updated_usages);
 
     // var_dump($docker_contents);
     $BEE_BR_HONEY[BEE_RI] = [$app_sub_domain, $www_app_sub_domain]; //[$app_sub_domain]; //[$app_sub_domain, $subdomain_res, $www_subdomain_res];
