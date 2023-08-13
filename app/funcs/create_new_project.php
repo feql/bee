@@ -74,13 +74,16 @@ function create_new_project(){
         $ngix_config_contents = str_replace("{{domains}}", $app_domains_list, $ngix_config_contents);
         //replace port, the docker port of the bee for the app
         $ngix_config_contents = str_replace("{{port}}", $bee_docker_port, $ngix_config_contents);
-        file_put_contents($app_nginx_config_file, $ngix_config_contents);
+        $xres = file_put_contents($app_nginx_config_file, $ngix_config_contents);
+        var_dump("xres", $xres);
         //create a symbolic link
         $nginx_sites_enabled_dir = "/sites_enabled/"; //getenv("FEQL_NGINX_SITES_AVAILABLE_DIR");
         $app_nginx_link_config_file = $nginx_sites_enabled_dir . $app_sub_domain.".conf";
         //sudo ln -s /etc/nginx/sites-available/your_domain /etc/nginx/sites-enabled/
         $link_cmd = "sudo ln -s $app_nginx_config_file  $app_nginx_link_config_file";
         shell_exec($link_cmd);
+    }else{
+        var_dump("file aleady exists ", $app_nginx_config_file);
     }
 
     // //create certificates using certbot
