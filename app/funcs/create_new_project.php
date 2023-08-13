@@ -64,24 +64,24 @@ function create_new_project(){
     // }
 
     // //configure nginx
-    // $nginx_sites_available_dir = "/sites_available/"; //getenv("FEQL_NGINX_SITES_AVAILABLE_DIR");
-    // $app_nginx_config_file = $nginx_sites_available_dir.$app_sub_domain.".conf";
-    // if(!file_exists($app_nginx_config_file)){
-    //     $nginx_template_file = "/bee_realease_configs/nginx_template.txt";
-    //     $ngix_config_contents = file_get_contents($nginx_template_file);
-    //     //replace domains
-    //     $app_domains_list = $app_sub_domain." ".$www_app_sub_domain;
-    //     $ngix_config_contents = str_replace("{{domains}}", $app_domains_list, $ngix_config_contents);
-    //     //replace port, the docker port of the bee for the app
-    //     $ngix_config_contents = str_replace("{{port}}", $bee_docker_port, $ngix_config_contents);
-    //     file_put_contents($app_nginx_config_file, $ngix_config_contents);
-    //     //create a symbolic link
-    //     $nginx_sites_enabled_dir = "/sites_enabled/"; //getenv("FEQL_NGINX_SITES_AVAILABLE_DIR");
-    //     $app_nginx_link_config_file = $nginx_sites_enabled_dir . $app_sub_domain.".conf";
-    //     //sudo ln -s /etc/nginx/sites-available/your_domain /etc/nginx/sites-enabled/
-    //     $link_cmd = "sudo ln -s $app_nginx_config_file  $app_nginx_link_config_file";
-    //     shell_exec($link_cmd);
-    // }
+    $nginx_sites_available_dir = "/sites_available/"; //getenv("FEQL_NGINX_SITES_AVAILABLE_DIR");
+    $app_nginx_config_file = $nginx_sites_available_dir.$app_sub_domain.".conf";
+    if(!file_exists($app_nginx_config_file)){
+        $nginx_template_file = "/bee_realease_configs/nginx_template.txt";
+        $ngix_config_contents = file_get_contents($nginx_template_file);
+        //replace domains
+        $app_domains_list = $app_sub_domain." ".$www_app_sub_domain;
+        $ngix_config_contents = str_replace("{{domains}}", $app_domains_list, $ngix_config_contents);
+        //replace port, the docker port of the bee for the app
+        $ngix_config_contents = str_replace("{{port}}", $bee_docker_port, $ngix_config_contents);
+        file_put_contents($app_nginx_config_file, $ngix_config_contents);
+        //create a symbolic link
+        $nginx_sites_enabled_dir = "/sites_enabled/"; //getenv("FEQL_NGINX_SITES_AVAILABLE_DIR");
+        $app_nginx_link_config_file = $nginx_sites_enabled_dir . $app_sub_domain.".conf";
+        //sudo ln -s /etc/nginx/sites-available/your_domain /etc/nginx/sites-enabled/
+        $link_cmd = "sudo ln -s $app_nginx_config_file  $app_nginx_link_config_file";
+        shell_exec($link_cmd);
+    }
 
     // //create certificates using certbot
     // //sudo certbot --nginx -d example.com -d www.example.com
