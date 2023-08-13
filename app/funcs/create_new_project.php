@@ -80,8 +80,9 @@ function create_new_project(){
         $nginx_sites_enabled_dir = "/sites_enabled/"; //getenv("FEQL_NGINX_SITES_AVAILABLE_DIR");
         $app_nginx_link_config_file = $nginx_sites_enabled_dir . $app_sub_domain.".conf";
         //sudo ln -s /etc/nginx/sites-available/your_domain /etc/nginx/sites-enabled/
-        $link_cmd = "sudo ln -s $app_nginx_config_file  $app_nginx_link_config_file";
-        shell_exec($link_cmd);
+        $link_cmd_to_send = "sudo ln -s $app_nginx_config_file  $nginx_sites_enabled_dir";
+        // $link_cmd = 'echo "'.$link_cmd_to_send.'" > /bee_realease_configs/feqpipe';
+        shell_exec($link_cmd_to_send);
     }
 
     //restart nginx
