@@ -67,6 +67,7 @@ function create_new_project(){
     // //configure nginx
     $nginx_sites_available_dir = "/sites_available/"; //getenv("FEQL_NGINX_SITES_AVAILABLE_DIR");
     $app_nginx_config_file = $nginx_sites_available_dir.$app_sub_domain.".conf";
+    $host_app_nginx_config_file = "/etc/nginx/sites-available/$app_sub_domain.conf";
     if(!file_exists($app_nginx_config_file)){
         $nginx_template_file = "/bee_realease_configs/nginx_template.txt";
         $ngix_config_contents = file_get_contents($nginx_template_file);
@@ -79,10 +80,12 @@ function create_new_project(){
         //create a symbolic link
         $nginx_sites_enabled_dir = "/sites_enabled/"; //getenv("FEQL_NGINX_SITES_AVAILABLE_DIR");
         $app_nginx_link_config_file = $nginx_sites_enabled_dir . $app_sub_domain.".conf";
+        $host_app_nginx_link_config_file = "/etc/nginx/sites-enabled/$app_sub_domain.conf";
         //sudo ln -s /etc/nginx/sites-available/your_domain /etc/nginx/sites-enabled/
-        $link_cmd_to_send = "sudo ln -s $app_nginx_config_file  $nginx_sites_enabled_dir";
-        // $link_cmd = 'echo "'.$link_cmd_to_send.'" > /bee_realease_configs/feqpipe';
-        shell_exec($link_cmd_to_send);
+        // $link_cmd_to_send = "sudo ln -s $app_nginx_config_file  $nginx_sites_enabled_dir";
+        $link_cmd_to_send = "sudo ln -s $host_app_nginx_config_file  $host_app_nginx_link_config_file";
+        $link_cmd = 'echo "'.$link_cmd_to_send.'" > /bee_realease_configs/feqpipe';
+        shell_exec($link_cmd);
     }
 
     //restart nginx
