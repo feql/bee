@@ -77,3 +77,18 @@ And then adding
 
 
  
+
+ ### challenges overcome
+
+ - volumes and file permissions
+ - named pipes
+ - copying and pasting
+ - environment variable files writing them the right way
+ - hard to test commands in isolation,
+ - keeping track of progess, avoid reapeating the same actions twice and provision for retries
+ - chaining all the cmd command together (so as to obeserve order)
+ - crontab to auto start shell to long live the pipe
+ - cannot test on macos vs linux containers due to pipe inter OS limiits
+ - the steps required to be accomplished
+ - containers limit access to other peoples files and also from OS underlying level access
+
