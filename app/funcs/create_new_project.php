@@ -88,32 +88,29 @@ function create_new_project(){
         shell_exec($link_cmd);
     }
 
-    //restart nginx
-    //https://stackoverflow.com/questions/7943684/nginx-can-i-add-a-new-virtual-host-without-restarting-the-server#:~:text=Yes%20you%20can.&text=Or%20you%20can%20send%20SIGHUP%20to%20the%20nginx%20process.&text=Read%20and%20test%20a%20new,configuration%20invalid%20then%20do%20nothing.
-    //nginx -s reload
-    //sudo kill -HUP [nginx's pid]
-    $reload_nginx_cmd_to_send = "nginx -s reload";
-    var_dump("reload_nginx_cmd_to_send", $reload_nginx_cmd_to_send);
-    $reload_nginx_cmd = 'echo "'.$reload_nginx_cmd_to_send.'" > /bee_realease_configs/feqpipe';
-    shell_exec($reload_nginx_cmd);
-    
-
-    //create certificates using certbot
-    //sudo certbot --nginx -d example.com -d www.example.com
-    // $certbot_cmd_to_send = "sudo certbot --nginx -d $app_sub_domain -d $www_app_sub_domain";
-    // var_dump("certbot_cmd_to_send:", $certbot_cmd_to_send);
-    // $certbot_cmd = 'echo "'.$certbot_cmd_to_send.'" > /bee_realease_configs/feqpipe';
-    // var_dump("certbot_cmd:", $certbot_cmd);
-    // shell_exec($certbot_cmd);
-
     // //start docker containers for the project
     // $compose_up_cmd = 'echo "docker ps -a" > /bee_realease_configs/feqpipe';
     // $cmd_to_send = "docker-compose -f $host_app_docker_compose_file_path up -d";
     // $compose_up_cmd = 'echo "'.$cmd_to_send.'" > /bee_realease_configs/feqpipe';
     // shell_exec($compose_up_cmd);
 
-
+    // //restart nginx
+    // //https://stackoverflow.com/questions/7943684/nginx-can-i-add-a-new-virtual-host-without-restarting-the-server#:~:text=Yes%20you%20can.&text=Or%20you%20can%20send%20SIGHUP%20to%20the%20nginx%20process.&text=Read%20and%20test%20a%20new,configuration%20invalid%20then%20do%20nothing.
+    // //nginx -s reload
+    // //sudo kill -HUP [nginx's pid]
+    // $reload_nginx_cmd_to_send = "nginx -s reload";
+    // $reload_nginx_cmd = 'echo "'.$reload_nginx_cmd_to_send.'" > /bee_realease_configs/feqpipe';
+    // shell_exec($reload_nginx_cmd);
     
+
+    //create certificates using certbot
+    //sudo certbot --nginx -d example.com -d www.example.com
+    $certbot_cmd_to_send = "sudo certbot --nginx -d $app_sub_domain -d $www_app_sub_domain";
+    var_dump($certbot_cmd_to_send);
+    $certbot_cmd = 'echo "'.$certbot_cmd_to_send.'" > /bee_realease_configs/feqpipe';
+    var_dump($certbot_cmd);
+    shell_exec($certbot_cmd);
+
     
     // //save port usage for the next project
     $taken_usage = "$mysql_docker_port $phpmyadmin_docker_port $bee_docker_port $app_name\n";

@@ -92,3 +92,6 @@ And then adding
  - the steps required to be accomplished
  - containers limit access to other peoples files and also from OS underlying level access
 
+
+
+sudo nginx -T | grep server_name
